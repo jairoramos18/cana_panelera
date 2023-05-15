@@ -1,0 +1,23 @@
+{
+  "name": "tailwind",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -o ./dist/build.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CatedrasUFPSO/tailwind.git"
+  },
+  "author": "Yo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CatedrasUFPSO/tailwind/issues"
+  },
+  "homepage": "https://github.com/CatedrasUFPSO/tailwind#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
