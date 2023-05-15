@@ -3,122 +3,230 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-  <title>sandbox</title>
+  <link rel="stylesheet" href="/caña/Archivos Tailwind/dist/output.css">
+  
+  <title>caña panele</title>
 </head>
-<body>
-  <nav class="nav flex flex-wrap items-center justify-between  bg-gray-400 px-20">
-    <div class="flex flex-no-shrink items-center mr-6 py-3 text-grey-darkest">
-      <span class="font-semibold text-xl tracking-tight text-white">sandbox</span>
-    </div>
-    
-    <input class="menu-btn hidden" type="checkbox" id="menu-btn">
-    <label class="menu-icon block cursor-pointer md:hidden px-2 py-4 relative select-none" for="menu-btn">
-      <span class="navicon bg-grey-darkest flex items-center relative"></span>
-    </label>
-    <ul class="menu border-b md:border-none flex justify-end list-reset m-0 w-full md:w-auto">
-      <li class="border-t md:border-none">
-        <a href="/" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold text-white ">demos</a>
-      </li>
-      <li class="border-t md:border-none">
-        <a href="*" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker text-white ">pages</a>
-      </li>
-      <li class="border-t md:border-none">
-        <a href="*" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker text-white ">proyect</a>
-      </li>
-      <li class="border-t md:border-none">
-        <a href="*" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker text-white ">blog</a>
-      </li>
-      <li class="border-t md:border-none">
-        <a href="*" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker text-white ">blocks</a>
-      </li>
-      <li class="border-t md:border-none">
-        <a href="*" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker text-white ">documentacion</a>
-      </li>
-    </ul>
-    <div class=" bg-gray-400 flex justify-between">
-      <div class="">
-        <input type="text" placeholder="buscar" class="border-2 rounded-sm">
-      </div>
-      <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-xl">sign in</button>
-    </div>
 
+
+<body class="bg-green-100">
+  <!-- Navigation -->
+  <nav class="bg-gray-500 border-b-2 border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <div>
+          <a href="/" class="text-gray-800 font-bold text-lg">Cultivo de Caña Panelera</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Inicio</a>
+          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Monitoreo del cultivo</a>
+          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Buenas prácticas culturales</a>
+          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Historial de cultivo</a>
+          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Alertas y notificaciones</a>
+          <a href="#" class="bg-gray-800 text-white rounded-full px-4 py-2 font-medium hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Iniciar sesión</a>
+        </div>
+      </div>
+    </div>
   </nav>
 
-
-  <section class=" bg-gray-600 flex flex-wrap items-center justify-between">
-    <div class="items-centers text-center">
-      <h1 class=" text-5xl font-bold my-5"> Crafting project specific solutions with espertise</h1>
-      <p class="my-5"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, officia, repudiandae voluptate
-        vitae dolorum ea amet ad debitis blanditiis reiciendis voluptas rerum </p>
-      <div>
-        <button class="bg-blue-300 text-white py-2 px-4 rounded-xl">Explore now</button>
-        <button class="bg-white text-blue-300 py-2 px-4 rounded-xl border-solid border-2 border-blue-300">Contact
-          us</button>
+  <!-- Hero -->
+  <div class="bg-black-100">
+    <div class="container mx-auto px-4 py-12">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full lg:w-1/2 px-4">
+          <h2 class="text-4xl font-bold leading-tight text-gray-800">Información general sobre el proyecto</h2>
+          <p class="mt-4 text-gray-600 leading-relaxed">Aquí se proporciona información sobre el proyecto y sus objetivos, así como una breve descripción de las funciones de la aplicación web.</p>
+        </div>
+        <div class="w-full lg:w-1/2 px-4">
+          <img src="/caña/Archivos Tailwind/caña.jpg" alt="Caña panelera" class="rounded-lg">
+        </div>
       </div>
-
-
     </div>
-   
-      <img
-        src="https://img.freepik.com/foto-gratis/retrato-mujer-joven-oficinista-sentada-escritorio-oficina-ordenador-portatil-mirando-camara-sonriendo-alegremente-trabajando-oficina_141793-21257.jpg?size=626&ext=jpg"
-        alt="señora oficinista" class="rounded-lg shadow-md mx-2">
+  </div>
+
+  
+  <section class="bg-gray-100 py-8">
+    <div class="container mx-auto px-2">
+      <h2 class="text-3xl font-bold mb-4">Monitoreo del cultivo</h2>
+      <table class="table-auto w-full">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="px-4 py-2">Fecha de siembra</th>
+            <th class="px-4 py-2">Fecha de cosecha estimada</th>
+            <th class="px-4 py-2">Estado actual del cultivo</th>
+            <th class="px-4 py-2">Labores culturales recomendadas</th>
+            <th class="px-4 py-2"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-4 py-2">01/01/2022</td>
+            <td class="border px-4 py-2">30/06/2022</td>
+            <td class="border px-4 py-2">En crecimiento</td>
+            <td class="border px-4 py-2">
+              <ul class="list-disc">
+                <li>Sembrar las plántulas</li>
+                <li>Fertilizar con nitrógeno</li>
+                <li>Controlar las malas hierbas</li>
+              </ul>
+            </td>
+            <td class="border px-4 py-2">
+              <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                Actualizar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </section>
-  
-  
-  
-    <section class=" bg-white flex flex-wrap items-center justify-between">
-      <div class="items-centers text-center">
-        <h1 class=" text-3xl font-bold my-5"> Trusted by over 25000+ clients</h1>
-        <p class="my-5"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, officia</p>
-  
-  
-      </div>
-  
-  
-      
-    </section>
-  
-  
     
-    <section>
-      <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <div class="md:w-1/3">
-          <img src="https://th.bing.com/th/id/OIP.lGc6kkaQe1rqNd9zwEcGVAHaE5?pid=ImgDet&w=1024&h=677&rs=1" alt="Imagen" class="rounded-lg shadow-md">
-        </div>
-        <div class=" md:w-1/2 md:pr-4 ml-10">
-          <h1 class="text-3xl font-bold mb-2 text-center">Who are we?</h1>
-          <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu sem justo. Proin sit amet ipsum vel urna gravida pulvinar vitae et velit. Nullam sit amet ex id leo cursus vulputate. Donec pretium augue eget bibendum imperdiet.</p>
-          <p class="text-gray-700 mb-4">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed euismod tellus vel odio fermentum, eget imperdiet libero sagittis. Integer sed pharetra ex, non pulvinar velit. Aliquam tempor lobortis elit, quis viverra massa luctus id.</p>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <img src="https://th.bing.com/th/id/OIP.YvGc8H7L5lTX0qDyl3ymGwHaE8?pid=ImgDet&w=2560&h=1709&rs=1" alt="Logo 1" class="rounded-full h-12">
+  </section>
+   
+  <section class="bg-gray-100 py-8">
+    <div class="container mx-auto px-2">
+      <h2 class="text-3xl font-bold mb-4">Buenas prácticas culturales</h2>
+      <ul class="list-disc ml-8">
+        <li class="mb-4">
+          <h3 class="text-lg font-bold mb-2">Siembra</h3>
+          <p class="text-gray-700">
+            Es importante sembrar las plántulas en un suelo bien preparado y libre de malezas. Además, se debe seleccionar un lugar que tenga un buen drenaje y una exposición adecuada al sol.
+          </p>
+        </li>
+        <li class="mb-4">
+          <h3 class="text-lg font-bold mb-2">Riego</h3>
+          <p class="text-gray-700">
+            La caña panelera requiere un riego constante y adecuado para
+          </p>
+          <div class="max-w-2xl mx-auto mt-10">
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <h2 class="text-center font-bold text-2xl mb-6 text-gray-800">Control de Cultivos de Panela</h2>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="fechaSiembra">
+                    Fecha de siembra
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="fechaSiembra" type="date" required>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="variedad">
+                    Variedad de panela
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="variedad" type="text" placeholder="Ingrese la variedad de panela" required>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="fechaRiego">
+                    Fecha de último riego
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="fechaRiego" type="date" required>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="frecuenciaRiego">
+                    Frecuencia de riego (días)
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="frecuenciaRiego" type="number" min="1" placeholder="Ingrese la frecuencia de riego en días" required>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="fechaFertilizacion">
+                    Fecha de última fertilización
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="fechaFertilizacion" type="date" required>
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="tipoFertilizante">
+                    Tipo de fertilizante utilizado
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="tipoFertilizante" type="text" placeholder="Ingrese el tipo de fertilizante utilizado" required>
+                </div>
+              </div>
+              
+     </div>
+     
+     <section class="bg-gray-100 py-12">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/caña/Archivos Tailwind/caña1.jpg" alt="Noticia 1" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
             </div>
-            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <img src="https://img.freepik.com/iconos-gratis/medalla_318-518465.jpg?w=2000" alt="Logo 2" class="rounded-full h-12">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/caña/Archivos Tailwind/R.jpg" alt="Noticia 2" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
             </div>
-            <p class="text-gray-700">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/caña/Archivos Tailwind/caña1.jpg" alt="Noticia 3" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            </div>
           </div>
         </div>
-       
       </div>
     </section>
-  
-
-
-</div>
-<div class="bg-red-600 h-12" style="height:200px;">
-    fooot
-</div>
-  
-
-
-   
-
-
+    
+       
+        
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center">
+          <div class="w-full lg:w-6/12 px-4">
+            <h2 class="text-4xl font-semibold mb-4">Contáctanos</h2>
+            <p class="text-lg leading-relaxed mb-4">
+              Si tienes preguntas sobre nuestro servicio o quieres hacer una sugerencia, no dudes en ponerte en contacto con nosotros.
+            </p>
+            <div class="mt-6">
+              <button class="bg-yellow-500 text-white active:bg-yellow-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="button">Enviar mensaje</button>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span class="block uppercase text-white text-sm font-semibold mb-2">Enlaces útiles</span>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Acerca de</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Blog</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Licencias</a></li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span class="block uppercase text-white text-sm font-semibold mb-2">Otras opciones</span>
+                <ul class="list-unstyled">
+                  <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">FAQ</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Contacto</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-sm text-gray-400 py-2">
+              © 2023, Caña Panelera App. Todos los derechos reservados.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
