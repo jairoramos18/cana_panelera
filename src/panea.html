@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/parcial-ib-i-sem-2023-jairoramos18/dist/output.css">
+</head>
+<style>
+  img{
+ width: 30px;
+ height: 30px;
+  }
+</style>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+
+    <!-- Publicaciones -->
+    <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
+      <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
+      <div class="space-y-4">
+        <!-- Ejemplo de publicación -->
+        <div class="flex items-center">
+          <div class="w-8 h-8">
+            <img class="w-full h-full rounded-full object-cover" src="/parcial-ib-i-sem-2023-jairoramos18/caña1.jpg" alt="Avatar">
+          </div>
+          <div class="ml-3">
+            <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
+            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <!-- Fin del ejemplo de publicación -->
+      </div>
+    </div>
+
+    <!-- Formulario de publicación -->
+    <div class="bg-white rounded-lg shadow-lg p-4">
+      <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
+      <form id="post-form">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
+          <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
+          <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
+        </div>
+        <div class="text-right">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
+        </div>
+      </form>
+    </div>
+    <script src="/parcial-ib-i-sem-2023-jairoramos18/src/app.js"></script>
+  </body>
+</body>
+</html>

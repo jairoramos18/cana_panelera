@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/caña/Archivos Tailwind/dist/output.css">
+  <link rel="stylesheet" href="/cana_panelera/Archivos Tailwind/dist/output.css">
   
   <title>caña panele</title>
 </head>
 
 
-<body class="bg-green-100">
+<body class="bg-white-100">
   <!-- Navigation -->
   <nav class="bg-gray-500 border-b-2 border-gray-200">
     <div class="container mx-auto px-4">
@@ -30,21 +30,17 @@
   </nav>
 
   <!-- Hero -->
-  <div class="bg-black-100">
-    <div class="container mx-auto px-4 py-12">
+  <div class="bg-black-100 relative">
+    <div class="absolute inset-0 bg-cover bg-center" ></div>
+    <div class="container mx-auto px-4 py-12 relative z-10">
       <div class="flex flex-wrap items-center -mx-4">
         <div class="w-full lg:w-1/2 px-4">
           <h2 class="text-4xl font-bold leading-tight text-gray-800">Información general sobre el proyecto</h2>
           <p class="mt-4 text-gray-600 leading-relaxed">Aquí se proporciona información sobre el proyecto y sus objetivos, así como una breve descripción de las funciones de la aplicación web.</p>
         </div>
-        <div class="w-full lg:w-1/2 px-4">
-          <img src="/caña/Archivos Tailwind/caña.jpg" alt="Caña panelera" class="rounded-lg">
-        </div>
       </div>
     </div>
   </div>
-
-  
   <section class="bg-gray-100 py-8">
     <div class="container mx-auto px-2">
       <h2 class="text-3xl font-bold mb-4">Monitoreo del cultivo</h2>
@@ -53,34 +49,40 @@
           <tr class="bg-gray-200">
             <th class="px-4 py-2">Fecha de siembra</th>
             <th class="px-4 py-2">Fecha de cosecha estimada</th>
-            <th class="px-4 py-2">Estado actual del cultivo</th>
-            <th class="px-4 py-2">Labores culturales recomendadas</th>
-            <th class="px-4 py-2"></th>
+            <th class="px-4 py-2">Estado del cultivo</th>
+            <th class="px-4 py-2">Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="border px-4 py-2">01/01/2022</td>
-            <td class="border px-4 py-2">30/06/2022</td>
+            <td class="border px-4 py-2">01/01/2023</td>
+            <td class="border px-4 py-2">01/06/2023</td>
             <td class="border px-4 py-2">En crecimiento</td>
             <td class="border px-4 py-2">
-              <ul class="list-disc">
-                <li>Sembrar las plántulas</li>
-                <li>Fertilizar con nitrógeno</li>
-                <li>Controlar las malas hierbas</li>
-              </ul>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
             </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">15/01/2023</td>
+            <td class="border px-4 py-2">15/06/2023</td>
+            <td class="border px-4 py-2">En floración</td>
             <td class="border px-4 py-2">
-              <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
-                Actualizar
-              </button>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="border px-4 py-2">01/02/2023</td>
+            <td class="border px-4 py-2">01/07/2023</td>
+            <td class="border px-4 py-2">En maduración</td>
+            <td class="border px-4 py-2">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    
   </section>
+
    
   <section class="bg-gray-100 py-8">
     <div class="container mx-auto px-2">
@@ -97,63 +99,7 @@
           <p class="text-gray-700">
             La caña panelera requiere un riego constante y adecuado para
           </p>
-          <div class="max-w-2xl mx-auto mt-10">
-            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-              <h2 class="text-center font-bold text-2xl mb-6 text-gray-800">Control de Cultivos de Panela</h2>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="fechaSiembra">
-                    Fecha de siembra
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="fechaSiembra" type="date" required>
-                </div>
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="variedad">
-                    Variedad de panela
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="variedad" type="text" placeholder="Ingrese la variedad de panela" required>
-                </div>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="fechaRiego">
-                    Fecha de último riego
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="fechaRiego" type="date" required>
-                </div>
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="frecuenciaRiego">
-                    Frecuencia de riego (días)
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="frecuenciaRiego" type="number" min="1" placeholder="Ingrese la frecuencia de riego en días" required>
-                </div>
-              </div>
-              <div class="grid grid-cols-2 gap-4">
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="fechaFertilizacion">
-                    Fecha de última fertilización
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="fechaFertilizacion" type="date" required>
-                </div>
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="tipoFertilizante">
-                    Tipo de fertilizante utilizado
-                  </label>
-                  <input
-                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="tipoFertilizante" type="text" placeholder="Ingrese el tipo de fertilizante utilizado" required>
-                </div>
-              </div>
+         
               
      </div>
      
@@ -162,7 +108,7 @@
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/caña/Archivos Tailwind/caña1.jpg" alt="Noticia 1" class="w-full">
+            <img src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Noticia 1" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -170,7 +116,7 @@
             </div>
           </div>
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/caña/Archivos Tailwind/R.jpg" alt="Noticia 2" class="w-full">
+            <img src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Noticia 2" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -178,7 +124,7 @@
             </div>
           </div>
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/caña/Archivos Tailwind/caña1.jpg" alt="Noticia 3" class="w-full">
+            <img src="/cana_panelera/Archivos Tailwind/R.jpg" alt="Noticia 3" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -189,7 +135,44 @@
       </div>
     </section>
     
-       
+       <section>
+      <body class="bg-gray-100">
+        <div class="container mx-auto p-4">
+          <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+      
+          <!-- Publicaciones -->
+          <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
+            <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
+            <div class="space-y-4">
+              <!-- Ejemplo de publicación -->
+              <div class="flex items-center">
+                <div class="w-8 h-8">
+                  <img class="w-full h-full rounded-full object-cover" src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Avatar">
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
+                  <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <!-- Fin del ejemplo de publicación -->
+            </div>
+          </div>
+      
+          <!-- Formulario de publicación -->
+          <div class="bg-white rounded-lg shadow-lg p-4">
+            <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
+            <form id="post-form">
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
+                <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
+                <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
+              </div>
+              <div class="text-right">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
+              </div>
+            </form>
+          </div>
+        </section>
         
     <footer class="bg-gray-900 text-white py-8">
       <div class="container mx-auto px-4">
@@ -228,5 +211,6 @@
         </div>
       </div>
     </footer>
+    <script src="/cana_panelera/Archivos Tailwind/src/app.js"></script>
 </body>
 </html>
