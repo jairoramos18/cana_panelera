@@ -3,103 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/cana_panelera/Archivos Tailwind/dist/output.css">
-  
-  <title>caña panele</title>
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="icon" href="/R.jpg">
+  <title>PANELEROS DEL FUTURO</title>
+  <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
+  <style>
+    #free{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("/R.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.date, .clock {
+  color: #fff;
+}
+
+body{
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.logo > img{
+width: 50px;
+height: 50px;
+vertical-align: top;
+margin-right: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+img{
+    width: 80px;
+}
+/* Contenedor del banner */
+.contenedor{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* Video */
+.background{
+    height: 100vh;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+}
+/* Banner */
+.banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.481);
+}
+/* Navegacion */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-inline:auto;
+    padding-top: 10px;
+}
+.logo img{
+    height: 30px;
+    width: 100px;
+}
+@media (min-width:768px) {
+    .logo img{
+        height: 60px;
+        width: 200px;
+    }
+}
+/* User */
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.user--icono{
+    background-color: white;
+   border-radius: 50%;
+   border: 3px solid blue;
+   padding: 5px; 
+}
+.user--icono img{
+    width: 20px;
+    height: 20px;
+}
+.user--nombre{
+    font-weight: 700;
+    color: white;
+    font-size: 15px;
+}
+@media (min-width:768px) {
+    .user--nombre{
+        font-size: 25px;
+    }
+}
+/* Contenido banner */
+.contenido{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-inline:auto;
+}
+@media (min-width:992px) {
+    .contenido{
+        flex-direction: row;
+        margin: auto;
+    }
+}
+/* Información */
+.informacion{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:768px) {
+    .informacion{
+        flex: none;
+    }
+}
+.informacion--contenido{
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+@media (min-width:992px) {
+    .informacion--contenido{
+        text-align: start;
+        gap: 30px;
+    }
+}
+.informacion--titulo{
+    font-size: 40px;
+    font-weight: 900;
+}
+.informacion--parrafo{
+    font-size: 18px;
+    font-weight: 700;
+}
+@media (min-width:768px) {
+    .informacion--titulo{
+        font-size: 60px;   
+    }
+    .informacion--parrafo{
+        font-size: 25px;
+    }
+}
+.informacion--btn button{
+    padding-block: 10px;
+    padding-inline: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 3px solid blue;
+    color: white;
+}
+.informacion--btn button:hover{
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+}
+/* Animacion */
+.animacion{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+@media (min-width:992px) {
+    .animacion{
+        flex: 1;
+    }
+}
+.goku{
+    position: absolute;
+}
+.goku img{
+    display: block;
+    min-width: 300px;
+    opacity: .2;
+    animation: goku 3s infinite;
+}
+@keyframes goku {
+    0%{
+        opacity: .6;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .6;
+    }
+}
+@media (min-width:480px) {
+    .goku img{
+        min-width: 305px;
+    }
+}
+@media (min-width:992px) {
+    .goku img{
+        min-width: 580px;
+    }
+}
+@media (min-width:1250px) {
+    .goku img{
+        min-width: 750px;
+    }
+}
+@media (min-width:1600px) {
+    .goku img{
+        min-width: 850px;
+    }
+}
+@media (min-width:1800px) {
+    .goku img{
+        min-width: 900px;
+    }
+}
+.rayos{
+    position: relative;
+    opacity: 1;
+    animation: electrico 3s infinite;
+}
+@keyframes electrico {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.rayos img{
+    display: block;
+    min-width: 250px;
+}
+@media (min-width:1024px) {
+    .rayos img{
+        min-width: 500px;
+    }
+}
+@media (min-width:1250px) {
+    .rayos img{
+        min-width: 550px;
+    }
+}
+
+
+  </style>
 </head>
 
 
-<body class="bg-white-100">
+<body>
   <!-- Navigation -->
-  <nav class="bg-gray-500 border-b-2 border-gray-200">
-    <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center py-4">
-        <div>
-          <a href="/" class="text-gray-800 font-bold text-lg">Cultivo de Caña Panelera</a>
-        </div>
-        <div class="flex items-center space-x-4">
-          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Inicio</a>
-          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Monitoreo del cultivo</a>
-          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Buenas prácticas culturales</a>
-          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Historial de cultivo</a>
-          <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Alertas y notificaciones</a>
-          <a href="#" class="bg-gray-800 text-white rounded-full px-4 py-2 font-medium hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Iniciar sesión</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <div class="bg-black-100 relative">
-    <div class="absolute inset-0 bg-cover bg-center" ></div>
-    <div class="container mx-auto px-4 py-12 relative z-10">
-      <div class="flex flex-wrap items-center -mx-4">
-        <div class="w-full lg:w-1/2 px-4">
-          <h2 class="text-4xl font-bold leading-tight text-gray-800">Información general sobre el proyecto</h2>
-          <p class="mt-4 text-gray-600 leading-relaxed">Aquí se proporciona información sobre el proyecto y sus objetivos, así como una breve descripción de las funciones de la aplicación web.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="bg-gray-100 py-8">
-    <div class="container mx-auto px-2">
-      <h2 class="text-3xl font-bold mb-4">Monitoreo del cultivo</h2>
-      <table class="table-auto w-full">
-        <thead>
-          <tr class="bg-gray-200">
-            <th class="px-4 py-2">Fecha de siembra</th>
-            <th class="px-4 py-2">Fecha de cosecha estimada</th>
-            <th class="px-4 py-2">Estado del cultivo</th>
-            <th class="px-4 py-2">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-4 py-2">01/01/2023</td>
-            <td class="border px-4 py-2">01/06/2023</td>
-            <td class="border px-4 py-2">En crecimiento</td>
-            <td class="border px-4 py-2">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">15/01/2023</td>
-            <td class="border px-4 py-2">15/06/2023</td>
-            <td class="border px-4 py-2">En floración</td>
-            <td class="border px-4 py-2">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="border px-4 py-2">01/02/2023</td>
-            <td class="border px-4 py-2">01/07/2023</td>
-            <td class="border px-4 py-2">En maduración</td>
-            <td class="border px-4 py-2">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ver detalles</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
+  <header>
    
-  <section class="bg-gray-100 py-8">
+    <nav class="bg-green-500 border-b-2 border-green-500">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center space-x-4">
+            <div class="logo">
+              <img src="/R.jpg" alt="html" class="h-8 w-8">
+            </div>
+            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Inicio</a>
+            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Buenas prácticas culturales</a>
+            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Historial de cultivo</a>
+            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Alertas y notificaciones</a>
+            <a href="#" class="bg-gray-800 text-white rounded-full px-4 py-2 font-medium hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Iniciar sesión</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <header class="contenedor">
+    <video class="background" width="640" height="480" autoplay muted loop playsinline>
+        <source src="/background.mp4" type="video/mp4">
+        <source src="/background.webm" type="video/webm">
+        <img src="/background-img.png" alt="Imagen fondo">
+    </video>
+    <div class="banner">
+        <div class="header">
+            <div class="logo">
+                <img src="/logo.png" alt="Logo">
+            </div>
+            <div class="user">
+                <div id="icono" class="user--icono">
+                    <img src="/icono-goku.png" alt="Icono goku">
+                </div>
+                
+            </div>
+        </div>
+        <div class="contenido">
+            <div class="informacion">
+                <div class="informacion--contenido">
+                    
+                    <div>
+                        <p class="informacion--parrafo">Lorem Ipsum is simply dummy text of</p>
+                        <p class="informacion--parrafo">the printing and typesetting industry.</p>
+                        <div class="date">
+                          <span id="weekDay" class="weekDay"></span>, 
+                          <span id="day" class="day"></span> de
+                          <span id="month" class="month"></span> del
+                          <span id="year" class="year"></span>
+                      </div>
+                      <div class="clock">
+                          <span id="hours" class="hours"></span> :
+                          <span id="minutes" class="minutes"></span> :
+                          <span id="seconds" class="seconds"></span>
+                      </div>
+                    </div>
+                    <div class="informacion--btn">
+                        <button type="button">Ver más</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="animacion">
+                <div class="goku">
+                    <img src="/goku.png" alt="Goku imagen">
+                </div>
+                <div class="rayos">
+                    <img src="/rayos.png" alt="Rayos imagen">
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    
+</header>
+  
+  <!-- Hero -->
+  <section id="free">
+   
+            <h2 class="text-4xl font-bold leading-tight text-white">Información general sobre el proyecto</h2>
+            <p class="mt-4 text-white leading-relaxed">Aquí se proporciona información sobre el proyecto y sus objetivos, así como una breve descripción de las funciones de la aplicación web.</p>
+            
+        
+  </section>
+ 
+ 
+   
+  <section class="bg-blue-600 py-8">
     <div class="container mx-auto px-2">
-      <h2 class="text-3xl font-bold mb-4">Buenas prácticas culturales</h2>
-      <ul class="list-disc ml-8">
-        <li class="mb-4">
-          <h3 class="text-lg font-bold mb-2">Siembra</h3>
-          <p class="text-gray-700">
-            Es importante sembrar las plántulas en un suelo bien preparado y libre de malezas. Además, se debe seleccionar un lugar que tenga un buen drenaje y una exposición adecuada al sol.
+      <section class="py-10 bg-gray-100">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-4">Introducción</h2>
+          <p class="text-lg text-gray-700">
+            Las buenas prácticas agrícolas (BPA) es el nombre que reciben una serie de actividades y prácticas aplicadas a la producción de frutas, hortalizas y demás cultivos, encaminadas a asegurar la calidad del producto entregado al consumidor. Las BPA se encuentran asociadas al desarrollo sostenible, así pues se debe buscar que la producción agrícola sea amigable con el medio ambiente.
           </p>
-        </li>
-        <li class="mb-4">
-          <h3 class="text-lg font-bold mb-2">Riego</h3>
-          <p class="text-gray-700">
-            La caña panelera requiere un riego constante y adecuado para
-          </p>
-         
+          <div class="overflow-hidden" id="introContent">
+            <p class="text-lg text-gray-700 mt-4">
+              Para que un sistema de producción agrícola sea sustentable es necesaria la sinergia entre los aspectos sociales, tecnológicos, económicos y ecológicos. Desde lo social, se debe garantizar que los sistemas productivos sean incluyentes con la población local, generando mejores condiciones de vida para la comunidad. A nivel tecnológico se deben utilizar semillas e insumos y maquinaria adaptada a las necesidades del productor, del cultivo y que garanticen una producción amigable con el medio ambiente. En cuanto a factores económicos, se deben tener en cuenta los gastos asociados a la producción y hacer una planificación detallada del cultivo. Los tres aspectos anteriores deben ir encaminados a garantizar el desarrollo sostenible del área de producción.
+            </p>
+            <p class="text-lg text-gray-700 mt-4">
+              Para implementar las BPA se debe tener en cuenta los distintos elementos que conforman el sistema productivo, con el fin de alcanzar el objetivo final: garantizar la producción de un alimento o una materia prima inocua.
+            </p>
+          </div>
+          <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" id="toggleBtn">Leer más</button>
+        </div>
+      </section>
+          <div class="bg-gray-200 p-4">
+            <h2 class="text-2xl font-bold mb-4">Manejo Integrado de Plagas</h2>
+            
+            <p class="mb-2">Utiliza métodos biológicos para el control de plagas.</p>
+            <p class="mb-2">Implementa prácticas culturales adecuadas para prevenir la proliferación de plagas.</p>
+            <p class="mb-2">Emplea productos químicos de forma responsable y siguiendo las recomendaciones de expertos.</p>
+          </div>
+          
+          <div class="bg-gray-200 p-4 mt-4">
+            <h2 class="text-2xl font-bold mb-4">Monitoreo de Plagas</h2>
+            
+            <p class="mb-2">Realiza un monitoreo regular de las plagas presentes en tus cultivos.</p>
+            <p class="mb-2">Identifica y registra la presencia de plagas de manera temprana.</p>
+            <p class="mb-2">Toma acciones de control basadas en el umbral de daño económico.</p>
+          </div>
+          
+          <div class="bg-gray-200 p-4 mt-4">
+            <h2 class="text-2xl font-bold mb-4">Fertilización Adecuada</h2>
+            
+            <p class="mb-2">Realiza un análisis de suelo para determinar las necesidades nutricionales de tus cultivos.</p>
+            <p class="mb-2">Aplica fertilizantes de manera balanceada y siguiendo las recomendaciones técnicas.</p>
+            <p class="mb-2">Mantén un seguimiento regular del estado nutricional de las plantas.</p>
+          </div>
+          
+          <div class="bg-gray-200 p-4 mt-4">
+            <h2 class="text-2xl font-bold mb-4">Buenas Prácticas Agrícolas</h2>
+            
+            <ul class="list-disc ml-6">
+              <li class="mb-2">Realiza una adecuada gestión de residuos agrícolas.</li>
+              <li class="mb-2">Implementa estrategias de control de malezas.</li>
+              <li class="mb-2">Practica la rotación de cultivos para prevenir la acumulación de plagas y enfermedades.</li>
+            </ul>
+          </div>
               
      </div>
      
@@ -211,6 +535,6 @@
         </div>
       </div>
     </footer>
-    <script src="/cana_panelera/Archivos Tailwind/src/app.js"></script>
+    <script src="/src/app.js"></script>
 </body>
 </html>

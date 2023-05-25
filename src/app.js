@@ -94,3 +94,84 @@ function displayPosts() {
 
    // Mostrar las publicaciones iniciales
    displayPosts();
+
+   var udateTime = function() {
+    let currentDate = new Date(),
+        hours = currentDate.getHours(),
+        minutes = currentDate.getMinutes(), 
+        seconds = currentDate.getSeconds(),
+        weekDay = currentDate.getDay(), 
+        day = currentDate.getDay(), 
+        month = currentDate.getMonth(), 
+        year = currentDate.getFullYear();
+ 
+    const weekDays = [
+        'Domingo',
+        'Lunes',
+        'Martes',
+        'Miércoles',
+        'Jueves',
+        'Viernes',
+        'Sabado'
+    ];
+ 
+    document.getElementById('weekDay').textContent = weekDays[weekDay];
+    document.getElementById('day').textContent = day;
+ 
+    const months = [
+        'Enero',
+        'Febrero',
+        'Marzo',
+        'Abril',
+        'Mayo',
+        'Junio',
+        'Julio',
+        'Agosto',
+        'Septiembre',
+        'Octubre',
+        'Noviembre',
+        'Diciembre'
+    ];
+ 
+    document.getElementById('month').textContent = months[month];
+    document.getElementById('year').textContent = year;
+ 
+    document.getElementById('hours').textContent = hours;
+ 
+    if (minutes < 10) {
+        minutes = "0" + minutes
+    }
+ 
+    if (seconds < 10) {
+        seconds = "0" + seconds
+    }
+ 
+    document.getElementById('minutes').textContent = minutes;
+    document.getElementById('seconds').textContent = seconds;
+};
+ 
+udateTime();
+ 
+setInterval(udateTime, 1000);
+
+document.getElementById('toggleBtn').addEventListener('click', function() {
+  var introContent = document.getElementById('introContent');
+  var toggleBtn = document.getElementById('toggleBtn');
+  
+  if (introContent.style.display === 'none') {
+    introContent.style.display = 'block';
+    toggleBtn.textContent = 'Ocultar';
+  } else {
+    introContent.style.display = 'none';
+    toggleBtn.textContent = 'Leer más';
+  }
+});
+
+
+const icono = document.querySelector('#icono');
+const video = document.querySelector('video');
+
+icono.addEventListener('click',()=>{
+    video.play();
+    video.controls = false;
+})

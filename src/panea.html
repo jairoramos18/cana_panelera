@@ -1,55 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/parcial-ib-i-sem-2023-jairoramos18/dist/output.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Contenido</title>
+  <script src="https://kit.fontawesome.com/c44504baf9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  
+   
 </head>
-<style>
-  img{
- width: 30px;
- height: 30px;
-  }
-</style>
-<body class="bg-gray-100">
-  <div class="container mx-auto p-4">
-    <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+<body>
 
-    <!-- Publicaciones -->
-    <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
-      <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
-      <div class="space-y-4">
-        <!-- Ejemplo de publicación -->
-        <div class="flex items-center">
-          <div class="w-8 h-8">
-            <img class="w-full h-full rounded-full object-cover" src="/parcial-ib-i-sem-2023-jairoramos18/caña1.jpg" alt="Avatar">
-          </div>
-          <div class="ml-3">
-            <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
-            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
-        </div>
-        <!-- Fin del ejemplo de publicación -->
-      </div>
+  
+  <div class="content-box">
+    <div class="table-of-contents">
+      <ul>
+        <li><a href="#planificacion"><i class="fas fa-check"></i><span>Planificación del Cultivo</span></a></li>
+        <li><a href="#identificacion"><i class="fas fa-exclamation-circle"></i><span>Identificación de Riesgos</span></a></li>
+        <li><a href="#adecuacion"><i class="fas fa-wrench"></i><span>Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones</span></a></li>
+        <li><a href="#aseguramiento-agua"><i class="fas fa-tint"></i><span>Aseguramiento de Agua</span></a></li>
+        <li><a href="#calidad-agua"><i class="fas fa-flask"></i><span>Aseguramiento de la Calidad del Agua</span></a></li>
+        <li><a href="#manejo-cosecha"><i class="fas fa-tractor"></i><span>Manejo de Cosecha</span></a></li>
+      </ul>
     </div>
+  
+    <!-- Resto del contenido de la página -->
+    <!-- ... -->
+  </div>
 
-    <!-- Formulario de publicación -->
-    <div class="bg-white rounded-lg shadow-lg p-4">
-      <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
-      <form id="post-form">
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
-          <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
-          <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
-        </div>
-        <div class="text-right">
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
-        </div>
-      </form>
+  <!-- Contenido de tu página -->
+  <h2 id="planificacion">Planificación del Cultivo</h2>
+  <p>Contenido de la sección de Planificación del Cultivo.</p>
+
+  <h2 id="identificacion">Identificación de Riesgos</h2>
+  <p>Contenido de la sección de Identificación de Riesgos.</p>
+
+  <h2 id="adecuacion">Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones</h2>
+  <p>Contenido de la sección de Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones.</p>
+
+  <h2 id="aseguramiento-agua">Aseguramiento de Agua</h2>
+  <p>Contenido de la sección de Aseguramiento de Agua.</p>
+
+  <h2 id="calidad-agua">Aseguramiento de la Calidad del Agua</h2>
+  <p>Contenido de la sección de Aseguramiento de la Calidad del Agua.</p>
+
+  <h2 id="manejo-cosecha">Manejo de Cosecha</h2>
+  <p>Contenido de la sección de Manejo de Cosecha.</p>
+
+  <div class="content-box">
+    <div class="box-header">
+      <h2>Información sobre el cultivo de caña panelera</h2>
     </div>
-    <script src="/parcial-ib-i-sem-2023-jairoramos18/src/app.js"></script>
-  </body>
+    <div class="box-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec turpis vel tellus rutrum commodo id ac urna. Suspendisse rhoncus lectus a risus feugiat, id commodo purus eleifend.</p>
+      <p>Donec nec elit quis arcu posuere mollis. Ut tincidunt tortor vitae ante vestibulum convallis. Nulla facilisi. Mauris vitae eros enim. Fusce feugiat quam vel lacus aliquet lacinia. Aenean efficitur fermentum felis, eget auctor risus congue in. Phasellus sagittis augue a nunc feugiat, sed rutrum velit fermentum.</p>
+    </div>
+  </div>
+  
+
+  <script>
+    // Obtener todos los enlaces de la tabla de contenido
+const links = document.querySelectorAll('.table-of-contents a');
+
+// Manejar el evento de clic en los enlaces
+links.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault(); // Evitar comportamiento predeterminado del enlace
+
+    // Remover la clase "active" de todos los enlaces
+    links.forEach((link) => {
+      link.classList.remove('active');
+    });
+
+    // Agregar la clase "active" al enlace clicado
+    link.classList.add('active');
+
+    // Obtener el elemento de destino del enlace
+    const targetId = link.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    // Desplazarse suavemente hacia el elemento de destino
+    targetElement.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+  </script>
+
 </body>
 </html>
+
