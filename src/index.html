@@ -4,27 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/dist/output.css">
-  <link rel="icon" href="/R.jpg">
+  <link rel="icon" href="/logo panela.png">
   <title>PANELEROS DEL FUTURO</title>
   <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
   <style>
-    #free{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    )
-    ,url("/R.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+ 
+
 .date, .clock {
   color: #fff;
 }
@@ -283,36 +268,46 @@ img{
 
 
 <body>
-  <!-- Navigation -->
   <header>
-   
-    <nav class="bg-green-500 border-b-2 border-green-500">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center py-4">
-          <div class="flex items-center space-x-4">
-            <div class="logo">
-              <img src="/R.jpg" alt="html" class="h-8 w-8">
-            </div>
-            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Inicio</a>
-            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Buenas prácticas culturales</a>
-            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Historial de cultivo</a>
-            <a href="#" class="text-gray-100 hover:text-gray-800 font-medium hover:underline">Alertas y notificaciones</a>
-            <a href="#" class="bg-gray-800 text-white rounded-full px-4 py-2 font-medium hover:bg-gray-700 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Iniciar sesión</a>
+    <header class="hero">
+      <nav class="nav container">
+          <div class="nav__logo">
+              <h2 class="nav__title">Curso CSS.</h2>
           </div>
-        </div>
-      </div>
-    </nav>
+  
+          <ul class="nav__link nav__link--menu">
+              <li class="nav__items">
+                  <a href="#" class="nav__links">Inicio</a>
+              </li>
+              <li class="nav__items">
+                  <a href="#" class="nav__links">Acerca de</a>
+              </li>
+              <li class="nav__items">
+                  <a href="#" class="nav__links">Contacto</a>
+              </li>
+              <li class="nav__items">
+                  <a href="#" class="nav__links">Blog</a>
+              </li>
+  
+              <img src="/Mi proyecto.png" class="nav__close">
+          </ul>
+  
+          <div class="nav__menu">
+              <img src="./images/menu.svg" class="nav__img">
+          </div>
+      </nav>
+  </header>
+  </header>
   </header>
   <header class="contenedor">
     <video class="background" width="640" height="480" autoplay muted loop playsinline>
-        <source src="/background.mp4" type="video/mp4">
-        <source src="/background.webm" type="video/webm">
-        <img src="/background-img.png" alt="Imagen fondo">
+        <source src="/video1.mp4" type="video/mp4">
+       
     </video>
     <div class="banner">
         <div class="header">
             <div class="logo">
-                <img src="/logo.png" alt="Logo">
+                <img src="/logo panela.png" alt="Logo">
             </div>
             <div class="user">
                 <div id="icono" class="user--icono">
@@ -326,8 +321,8 @@ img{
                 <div class="informacion--contenido">
                     
                     <div>
-                        <p class="informacion--parrafo">Lorem Ipsum is simply dummy text of</p>
-                        <p class="informacion--parrafo">the printing and typesetting industry.</p>
+                        <p class="informacion--parrafo">Información general sobre el proyecto</p>
+                        
                         <div class="date">
                           <span id="weekDay" class="weekDay"></span>, 
                           <span id="day" class="day"></span> de
@@ -348,7 +343,7 @@ img{
             </div>
             <div class="animacion">
                 <div class="goku">
-                    <img src="/goku.png" alt="Goku imagen">
+                    <img src="/Mi proyecto.png" alt="Goku imagen">
                 </div>
                 <div class="rayos">
                     <img src="/rayos.png" alt="Rayos imagen">
@@ -360,19 +355,11 @@ img{
     </div>
     
 </header>
-  
-  <!-- Hero -->
-  <section id="free">
-   
-            <h2 class="text-4xl font-bold leading-tight text-white">Información general sobre el proyecto</h2>
-            <p class="mt-4 text-white leading-relaxed">Aquí se proporciona información sobre el proyecto y sus objetivos, así como una breve descripción de las funciones de la aplicación web.</p>
-            
-        
-  </section>
+ 
  
  
    
-  <section class="bg-blue-600 py-8">
+  <section class="bg-gray-700 py-8">
     <div class="container mx-auto px-2">
       <section class="py-10 bg-gray-100">
         <div class="container mx-auto">
@@ -432,7 +419,7 @@ img{
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Noticia 1" class="w-full">
+            <img src="/foto panela.jpg" alt="Noticia 1" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -440,7 +427,7 @@ img{
             </div>
           </div>
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Noticia 2" class="w-full">
+            <img src="/panela.jpg" alt="Noticia 2" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -448,7 +435,7 @@ img{
             </div>
           </div>
           <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/cana_panelera/Archivos Tailwind/R.jpg" alt="Noticia 3" class="w-full">
+            <img src="/cañita.jpg" alt="Noticia 3" class="w-full">
             <div class="p-4">
               <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
               <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -471,7 +458,7 @@ img{
               <!-- Ejemplo de publicación -->
               <div class="flex items-center">
                 <div class="w-8 h-8">
-                  <img class="w-full h-full rounded-full object-cover" src="/cana_panelera/Archivos Tailwind/caña1.jpg" alt="Avatar">
+                  <img class="w-full h-full rounded-full object-cover" src="/foto panela.jpg" alt="Avatar">
                 </div>
                 <div class="ml-3">
                   <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
