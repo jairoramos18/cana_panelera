@@ -5,10 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/dist/output.css">
   <link rel="icon" href="/logo panela.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
   <title>PANELEROS DEL FUTURO</title>
   <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
   <style>
- 
+ *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+   
+}
 
 .date, .clock {
   color: #fff;
@@ -28,12 +36,7 @@ margin-right: 20px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family: 'Roboto', sans-serif;
-}
+
 img{
     width: 80px;
 }
@@ -276,9 +279,11 @@ body{
 }
 
 .menu{
-    background-color: #1A202C;
+    background-color: #1e8d0f;
     color: #fff;
     height: 70px;
+    text-transform: uppercase;
+    
 }
 
 .menu__container{
@@ -437,6 +442,132 @@ body{
 .background {
   opacity: 1;
 }
+
+/* banner */
+.banner{
+    min-height: 400px;
+    background-image: url('./../imagenes/background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contenedor--banner{
+    width: 90%;
+    margin-inline:auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px) {
+    .contenedor--banner{
+        flex-direction: row;
+    }   
+}
+.banner--info{
+    width: 100%;
+    color: #292B38;
+}
+@media (min-width:768px) {
+    .banner--info{
+        width: 70%;
+    }
+}
+.banner--titulo span{
+    font-weight: 700;
+}
+.banner--descripcion{
+    display: flex;
+    gap: 10px;
+    text-align: justify;
+    flex-direction: column;
+}
+.btn--descripcion{
+    background-color: #FFBC00;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+}
+.btn--descripcion:hover{
+    background-color: #292B38;
+}
+/* Main */
+.contenedor--main{
+    width: 95%;
+    margin-inline:auto;
+}
+@media (min-width:768px) {
+    .contenedor--main{
+        width: 80%;
+    }
+}
+.cajas{
+    display: grid;
+    gap: 60px;
+}
+@media (min-width:768px) {
+    .cajas{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.contenedor--main h2{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+.caja{
+    background-color: #E7E7E7;
+    color: #292B38;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:992px) {
+    .caja{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.caja--imagen{
+    width: 80%;
+    margin-top: -40px;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width:992px) {
+    .caja--imagen{
+        height: 80%;
+        margin-top: 0;
+        margin-left: -40px;
+    }
+}
+.caja--imagen img{
+    border-radius: 10px;
+}
+.caja--info{
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.caja--info h1{
+    font-size: 20px;
+    font-weight: 900;
+}
+.caja--info span{
+    font-weight: 700;
+}
+#foto{
+    width: 100%;
+    object-fit: cover;
+}
 </style>
 </head>
 
@@ -448,7 +579,7 @@ body{
 
         <ul class="menu__links">
             <li class="menu__item">
-                <a href="#" class="menu__link">Home</a>
+                <a href="#" class="menu__link">inicio</a>
             </li>
 
             <li class="menu__item menu__item--show">
@@ -484,7 +615,7 @@ body{
             </li>
 
             <li class="menu__item">
-                <a href="#" class="menu__link">Contact</a>
+                <a href="#" class="menu__link">Contactanos</a>
             </li>
 
         </ul>
@@ -508,7 +639,7 @@ body{
             </div>
             <div class="user">
                 <div id="icono" class="user--icono">
-                    <img src="/icono-goku.png" alt="Icono goku">
+                    <img src="/Mi proyecto.png" alt="Icono goku">
                 </div>
                 
             </div>
@@ -681,7 +812,55 @@ body{
             </form>
           </div>
         </section>
-        
+        <main class="contenedor--main">
+            <h2>LOS PANELEROSDEL FUTURO</h2>
+            <div class="cajas">
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img id="foto" src="/casa-uno.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-dos.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-tres.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-cuatro.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+            </div>
+        </main>
     <footer class="bg-gray-900 text-white py-8">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
