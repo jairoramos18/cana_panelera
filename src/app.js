@@ -188,7 +188,6 @@ const menuButtons = document.querySelectorAll(".group > button");
 menuButtons.forEach((button) => {
   button.addEventListener("click", toggleSubMenu);
 });
-
 (function(){
   const listElements = document.querySelectorAll('.menu__item--show');
   const list = document.querySelector('.menu__links');
