@@ -1,91 +1,468 @@
-<!DOCTYPE html>
-<html lang="es">
+
+  <!-- <script src="https://kit.fontawesome.com/f53c4d8d7b.js" crossorigin="anonymous"></script> -->
+  <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabla de Contenido</title>
-  <script src="https://kit.fontawesome.com/c44504baf9.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/src/style.css">
-  
-   
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/f53c4d8d7b.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .my-logi {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .my-menu {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #097e3d;
+      padding: 10px 30px;
+      margin: 0;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .my-menu-item {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin-right: 10px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .my-menu-item i {
+      margin-right: 5px;
+      text-decoration: none;
+    }
+
+    .my-menu-item {
+      text-decoration: none;
+    }
+
+    .my-form-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      max-width: 80%;
+    }
+
+    .my-form-container.active {
+      display: block;
+    }
+
+    .my-form-container h4 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .my-form-container input[type="text"],
+    .my-form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .my-form-container button[type="submit"] {
+      background: #097e3d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .my-form-container .my-error {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
-
-  
-  <div class="content-box">
-    <div class="table-of-contents">
-      <ul>
-        <li><a href="#planificacion"><i class="fas fa-check"></i><span>Planificación del Cultivo</span></a></li>
-        <li><a href="#identificacion"><i class="fas fa-exclamation-circle"></i><span>Identificación de Riesgos</span></a></li>
-        <li><a href="#adecuacion"><i class="fas fa-wrench"></i><span>Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones</span></a></li>
-        <li><a href="#aseguramiento-agua"><i class="fas fa-tint"></i><span>Aseguramiento de Agua</span></a></li>
-        <li><a href="#calidad-agua"><i class="fas fa-flask"></i><span>Aseguramiento de la Calidad del Agua</span></a></li>
-        <li><a href="#manejo-cosecha"><i class="fas fa-tractor"></i><span>Manejo de Cosecha</span></a></li>
-      </ul>
+  <nav>
+    <div class="my-logi">
+      <div class="my-menu">
+        <div class="my-menu-item" id="menu-login">
+          <i class="fas fa-sign-in-alt"></i>
+          Iniciar sesión
+        </div>
+        <div class="my-menu-item" id="menu-registration">
+          <i class="fas fa-user-plus"></i>
+          Registrarse
+        </div>
+        <a href="#" class="my-menu-item" id="menu-noticias">
+          <i class="fas fa-newspaper"></i>
+          Noticias
+        </a>
+        <a href="#" class="my-menu-item" id="menu-contacto">
+          <i class="fas fa-envelope"></i>
+          Contacto
+        </a>
+      </div>
     </div>
-  
-    <!-- Resto del contenido de la página -->
-    <!-- ... -->
-  </div>
 
-  <!-- Contenido de tu página -->
-  <h2 id="planificacion">Planificación del Cultivo</h2>
-  <p>Contenido de la sección de Planificación del Cultivo.</p>
-
-  <h2 id="identificacion">Identificación de Riesgos</h2>
-  <p>Contenido de la sección de Identificación de Riesgos.</p>
-
-  <h2 id="adecuacion">Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones</h2>
-  <p>Contenido de la sección de Adecuación y Mantenimiento de Áreas, Herramientas e Instalaciones.</p>
-
-  <h2 id="aseguramiento-agua">Aseguramiento de Agua</h2>
-  <p>Contenido de la sección de Aseguramiento de Agua.</p>
-
-  <h2 id="calidad-agua">Aseguramiento de la Calidad del Agua</h2>
-  <p>Contenido de la sección de Aseguramiento de la Calidad del Agua.</p>
-
-  <h2 id="manejo-cosecha">Manejo de Cosecha</h2>
-  <p>Contenido de la sección de Manejo de Cosecha.</p>
-
-  <div class="content-box">
-    <div class="box-header">
-      <h2>Información sobre el cultivo de caña panelera</h2>
+    <div id="login-form" class="my-form-container">
+      <h4>Iniciar sesión</h4>
+      <form id="login-form-validation">
+        <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+        <input type="password" id="login-password" placeholder="Contraseña" required>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div id="login-error" class="my-error"></div>
+      <div class="close-button" id="login-close-button"><i class="fas fa-times"></i></div>
     </div>
-    <div class="box-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec turpis vel tellus rutrum commodo id ac urna. Suspendisse rhoncus lectus a risus feugiat, id commodo purus eleifend.</p>
-      <p>Donec nec elit quis arcu posuere mollis. Ut tincidunt tortor vitae ante vestibulum convallis. Nulla facilisi. Mauris vitae eros enim. Fusce feugiat quam vel lacus aliquet lacinia. Aenean efficitur fermentum felis, eget auctor risus congue in. Phasellus sagittis augue a nunc feugiat, sed rutrum velit fermentum.</p>
-    </div>
-  </div>
-  
 
+    <div id="registration-form" class="my-form-container">
+      <h4>Registrarse</h4>
+      <form id="registration-form-validation">
+        <input type="text" id="registration-username" placeholder="Nombre de usuario" required>
+        <input type="password" id="registration-password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+      </form>
+      <div id="registration-error" class="my-error"></div>
+      <div class="close-button" id="registration-close-button"><i class="fas fa-times"></i></div>
+    </div>
+  </nav>
   <script>
-    // Obtener todos los enlaces de la tabla de contenido
-const links = document.querySelectorAll('.table-of-contents a');
+    const menuLogin = document.getElementById("menu-login");
+    const menuRegistration = document.getElementById("menu-registration");
+    const loginForm = document.getElementById("login-form");
+    const registrationForm = document.getElementById("registration-form");
+    const loginCloseButton = document.getElementById("login-close-button");
+    const registrationCloseButton = document.getElementById("registration-close-button");
+    const loginFormValidation = document.getElementById("login-form-validation");
+    const registrationFormValidation = document.getElementById("registration-form-validation");
+    const loginError = document.getElementById("login-error");
+    const registrationError = document.getElementById("registration-error");
 
-// Manejar el evento de clic en los enlaces
-links.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault(); // Evitar comportamiento predeterminado del enlace
-
-    // Remover la clase "active" de todos los enlaces
-    links.forEach((link) => {
-      link.classList.remove('active');
+    menuLogin.addEventListener("click", function(e) {
+      e.preventDefault();
+      showForm(loginForm);
     });
 
-    // Agregar la clase "active" al enlace clicado
-    link.classList.add('active');
+    menuRegistration.addEventListener("click", function(e) {
+      e.preventDefault();
+      showForm(registrationForm);
+    });
 
-    // Obtener el elemento de destino del enlace
-    const targetId = link.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
+    loginCloseButton.addEventListener("click", function() {
+      hideForm(loginForm);
+    });
 
-    // Desplazarse suavemente hacia el elemento de destino
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  });
-});
+    registrationCloseButton.addEventListener("click", function() {
+      hideForm(registrationForm);
+    });
 
+    loginFormValidation.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+
+      if (username.trim() === "") {
+        showError(loginError, "Por favor, introduce tu nombre de usuario");
+      } else {
+        hideError(loginError);
+      }
+
+      if (password.trim() === "") {
+        showError(loginError, "Por favor, introduce tu contraseña");
+      } else {
+        hideError(loginError);
+      }
+
+      // Aquí puedes realizar la lógica adicional para el inicio de sesión
+    });
+
+    registrationFormValidation.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("registration-username").value;
+      const password = document.getElementById("registration-password").value;
+
+      if (username.trim() === "") {
+        showError(registrationError, "Por favor, introduce tu nombre de usuario");
+      } else {
+        hideError(registrationError);
+      }
+
+      if (password.trim() === "") {
+        showError(registrationError, "Por favor, introduce tu contraseña");
+      } else {
+        hideError(registrationError);
+      }
+
+      // Aquí puedes realizar la lógica adicional para el registro
+    });
+
+    function showForm(form) {
+      form.classList.add("active");
+    }
+
+    function hideForm(form) {
+      form.classList.remove("active");
+      hideError(loginError);
+      hideError(registrationError);
+    }
+
+    function showError(element, message) {
+      element.innerText = message;
+      element.style.display = "block";
+    }
+
+    function hideError(element) {
+      element.style.display = "none";
+    }
   </script>
-
 </body>
 </html>
+<section class="bg-gray-700 py-8">
+  <div class="container mx-auto px-2">
+    <section class="py-10 bg-gray-100">
+      <div class="container mx-auto w-full">
+        <h2 class="text-3xl font-bold mb-4">Introducción</h2>
+        <p class="text-lg text-gray-700">
+          Las buenas prácticas agrícolas (BPA) es el nombre que reciben una serie de actividades y prácticas aplicadas a la producción de frutas, hortalizas y demás cultivos, encaminadas a asegurar la calidad del producto entregado al consumidor. Las BPA se encuentran asociadas al desarrollo sostenible, así pues se debe buscar que la producción agrícola sea amigable con el medio ambiente.
+        </p>
+        <div class="overflow-hidden" id="introContent">
+          <p class="text-lg text-gray-700 mt-4">
+            Para que un sistema de producción agrícola sea sustentable es necesaria la sinergia entre los aspectos sociales, tecnológicos, económicos y ecológicos. Desde lo social, se debe garantizar que los sistemas productivos sean incluyentes con la población local, generando mejores condiciones de vida para la comunidad. A nivel tecnológico se deben utilizar semillas e insumos y maquinaria adaptada a las necesidades del productor, del cultivo y que garanticen una producción amigable con el medio ambiente. En cuanto a factores económicos, se deben tener en cuenta los gastos asociados a la producción y hacer una planificación detallada del cultivo. Los tres aspectos anteriores deben ir encaminados a garantizar el desarrollo sostenible del área de producción.
+          </p>
+          <p class="text-lg text-gray-700 mt-4">
+            Para implementar las BPA se debe tener en cuenta los distintos elementos que conforman el sistema productivo, con el fin de alcanzar el objetivo final: garantizar la producción de un alimento o una materia prima inocua.
+          </p>
+        </div>
+        <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" id="toggleBtn">Leer más</button>
+      </div>
+    </section>
+  </div>
+</section>
+         
+     <section>
+        <h4 class="titulo-tabla">Tabla de Contenido</h4>
 
+  <div class="iconos-menu">
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo1')">
+        <img class="iconos-tabla" src="/img/Planificacin-del-cultivo.png" alt="Planificacion del cultivo">
+      </a>
+      <h3 class="titulo-icon">Planificación del<br>Cultivo</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo2')">
+        <img class="iconos-tabla" src="/img/Identificacion-y-gestin-de-riesgos (1).png" alt="Identificacion de riesgos">
+      </a>
+      <h3 class="titulo-icon">Identificación y Gestión<br>de Riesgos</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo3')">
+        <img class="iconos-tabla" src="/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Adecuacion y mantenimiento">
+      </a>
+      <h3 class="titulo-icon">Adecuación y Mantenimiento<br>de Áreas, herramientas e instalaciones</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo4')">
+        <img class="iconos-tabla" src="/img/Aseguramiento-de-la-calidad-del-agua.png" alt="Aseguramiento agua">
+      </a>
+      <h3 class="titulo-icon">Aseguramiento de la<br>Calidad del Agua</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo5')">
+        <img class="iconos-tabla" src="/img/Manejo-en-cosecha-y-poscosecha.png" alt="Manejo de cosecha">
+      </a>
+      <h3 class="titulo-icon">Manejo en<br>Cosecha y Poscosecha</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo6')">
+        <img class="iconos-tabla" src="/img/Manejo-integrado-de-plagas-MIP.png" alt="Manejo Integrado de Plagas (MIP)">
+      </a>
+      <h3 class="titulo-icon">Manejo Integrado de<br>Plagas (MIP)</h3>
+    </div>
+
+    <div class="titulo-iconos">
+      <a href="#" onclick="scrollToElement('.titulo7')">
+        <img class="iconos-tabla" src="/img/Proteccin-del-medio-ambiente.png" alt="Protección del Medio Ambiente">
+      </a>
+      <h3 class="titulo-icon">Protección del<br>Medio Ambiente</h3>
+    </div>
+  </div>
+     </section>
+     <section class="bg-black  w-full">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/foto panela.jpg" alt="Noticia 1" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/panela.jpg" alt="Noticia 2" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="/cañita.jpg" alt="Noticia 3" class="w-full">
+            <div class="p-4">
+              <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
+              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+       <section id="foro">
+      <body class="bg-gray-100">
+        <div class="container mx-auto p-4">
+          <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+      
+          <!-- Publicaciones -->
+          <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
+            <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
+            <div class="space-y-4">
+              <!-- Ejemplo de publicación -->
+              <div class="flex items-center">
+                <div class="w-8 h-8">
+                  <img class="w-full h-full rounded-full object-cover" src="/foto panela.jpg" alt="Avatar">
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
+                  <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <!-- Fin del ejemplo de publicación -->
+            </div>
+          </div>
+      
+          <!-- Formulario de publicación -->
+          <div class="bg-white rounded-lg shadow-lg p-4 w-full h-full">
+            <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
+            <form id="post-form">
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
+                <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
+                <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
+              </div>
+              <div class="text-right">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <main class="contenedor--main">
+            <h2>LOS PANELEROSDEL FUTURO</h2>
+            <div class="cajas">
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img id="foto" src="/casa-uno.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-dos.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-tres.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+                <article class="caja">
+                    <div class="caja--imagen">
+                        <img  id="foto" src="/casa-cuatro.jpg" alt="Imagen casa">
+                    </div>
+                    <div class="caja--info">
+                        <h1>Rem qui doloribus provident.</h1>
+                        <span>lorem: oloribus provident</span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                    </div>
+                </article>
+            </div>
+  </main>
+  <footer class="bg-gray-900 text-white h-full">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap justify-center">
+        <div class="w-full lg:w-6/12 px-4">
+          <h2 class="text-4xl font-semibold mb-4">Contáctanos</h2>
+          <p class="text-lg leading-relaxed mb-4">
+            Si tienes preguntas sobre nuestro servicio o quieres hacer una sugerencia, no dudes en ponerte en contacto con nosotros.
+          </p>
+          <div class="mt-6">
+            <button class="bg-yellow-500 text-white active:bg-yellow-600 font-bold uppercase text-sm px-6 py-3 rounded-full shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" type="button">Enviar mensaje</button>
+          </div>
+        </div>
+        <div class="w-full lg:w-6/12 px-4">
+          <div class="flex flex-wrap items-top mb-6">
+            <div class="w-full lg:w-4/12 px-4 ml-auto">
+              <span class="block uppercase text-white text-sm font-semibold mb-2">Enlaces útiles</span>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Acerca de</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Blog</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Licencias</a></li>
+              </ul>
+            </div>
+            <div class="w-full lg:w-4/12 px-4">
+              <span class="block uppercase text-white text-sm font-semibold mb-2">Otras opciones</span>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">FAQ</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-gray-300 font-semibold block pb-2 text-sm">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="text-sm text-gray-400 py-2">
+            © 2023, Caña Panelera App. Todos los derechos reservados.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

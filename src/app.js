@@ -17,8 +17,8 @@ function displayPosts() {
     postElement.className = 'flex';
     postElement.innerHTML = `
       <div class="flex items-center">
-        <div class="w-8 h-8">
-          <img class="w-full h-full rounded-full object-cover" src="/parcial-ib-i-sem-2023-jairoramos18/caña1.jpg" alt="Avatar">
+        <div class="w-2 h-2">
+          <img class="w-2 h-2 rounded-full object-cover" src="/cana_panelera/foto panela.jpg" alt="Avatar">
         </div>
         <div class="ml-3">
           <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
@@ -154,18 +154,21 @@ udateTime();
  
 setInterval(udateTime, 1000);
 
-document.getElementById('toggleBtn').addEventListener('click', function() {
-  var introContent = document.getElementById('introContent');
-  var toggleBtn = document.getElementById('toggleBtn');
-  
-  if (introContent.style.display === 'none') {
-    introContent.style.display = 'block';
-    toggleBtn.textContent = 'Ocultar';
+function toggleContent() {
+  var extraContent = document.getElementById("extraContent");
+  var extraContent2 = document.getElementById("extraContent2");
+  var toggleBtn = document.getElementById("toggleBtn");
+
+  if (extraContent.style.display === "none") {
+    extraContent.style.display = "block";
+    extraContent2.style.display = "block";
+    toggleBtn.innerText = "Leer menos";
   } else {
-    introContent.style.display = 'none';
-    toggleBtn.textContent = 'Leer más';
+    extraContent.style.display = "none";
+    extraContent2.style.display = "none";
+    toggleBtn.innerText = "Leer más";
   }
-});
+}
 
 
 const icono = document.querySelector('#icono');
@@ -245,3 +248,97 @@ menuButtons.forEach((button) => {
 
 
 })();
+
+function scrollToElement(element) {
+  const target = document.querySelector(element);
+  target.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+const menuLogin = document.getElementById("menu-login");
+const menuRegistration = document.getElementById("menu-registration");
+const loginForm = document.getElementById("login-form");
+const registrationForm = document.getElementById("registration-form");
+const loginCloseButton = document.getElementById("login-close-button");
+const registrationCloseButton = document.getElementById("registration-close-button");
+const loginFormValidation = document.getElementById("login-form-validation");
+const registrationFormValidation = document.getElementById("registration-form-validation");
+const loginError = document.getElementById("login-error");
+const registrationError = document.getElementById("registration-error");
+
+menuLogin.addEventListener("click", function(e) {
+  e.preventDefault();
+  showForm(loginForm);
+});
+
+menuRegistration.addEventListener("click", function(e) {
+  e.preventDefault();
+  showForm(registrationForm);
+});
+
+loginCloseButton.addEventListener("click", function() {
+  hideForm(loginForm);
+});
+
+registrationCloseButton.addEventListener("click", function() {
+  hideForm(registrationForm);
+});
+
+loginFormValidation.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const username = document.getElementById("login-username").value;
+  const password = document.getElementById("login-password").value;
+
+  if (username.trim() === "") {
+    showError(loginError, "Por favor, introduce tu nombre de usuario");
+  } else {
+    hideError(loginError);
+  }
+
+  if (password.trim() === "") {
+    showError(loginError, "Por favor, introduce tu contraseña");
+  } else {
+    hideError(loginError);
+  }
+
+  // Aquí puedes realizar la lógica adicional para el inicio de sesión
+});
+
+registrationFormValidation.addEventListener("submit", function(e) {
+  e.preventDefault();
+  const username = document.getElementById("registration-username").value;
+  const password = document.getElementById("registration-password").value;
+
+  if (username.trim() === "") {
+    showError(registrationError, "Por favor, introduce tu nombre de usuario");
+  } else {
+    hideError(registrationError);
+  }
+
+  if (password.trim() === "") {
+    showError(registrationError, "Por favor, introduce tu contraseña");
+  } else {
+    hideError(registrationError);
+  }
+
+  // Aquí puedes realizar la lógica adicional para el registro
+});
+
+function showForm(form) {
+  form.classList.add("active");
+}
+
+function hideForm(form) {
+  form.classList.remove("active");
+  hideError(loginError);
+  hideError(registrationError);
+}
+
+function showError(element, message) {
+  element.innerText = message;
+  element.style.display = "block";
+}
+
+function hideError(element) {
+  element.style.display = "none";
+}

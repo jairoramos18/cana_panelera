@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="/cana_panelera/dist/output.css">
   <link rel="icon" href="/logo panela.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f53c4d8d7b.js" crossorigin="anonymous"></script>
   <title>PANELEROS DEL FUTURO</title>
   <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
   <style>
@@ -22,12 +23,7 @@
   color: #fff;
 }
 
-body{
-  font-family: "Oswald", sans-serif;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 0;
-}
+
 .logo > img{
 width: 50px;
 height: 50px;
@@ -73,12 +69,12 @@ img{
 }
 .logo img{
     height: 30px;
-    width: 100px;
+    width: 30px;
 }
 @media (min-width:768px) {
     .logo img{
         height: 60px;
-        width: 200px;
+        width: 60px;
     }
 }
 /* User */
@@ -276,13 +272,21 @@ img{
 
 body{
     font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .menu{
-    background-color: #1e8d0f;
+    
     color: #fff;
     height: 70px;
     text-transform: uppercase;
+    position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #135a13;
     
 }
 
@@ -443,21 +447,8 @@ body{
   opacity: 1;
 }
 
-/* banner */
-.banner{
-    min-height: 400px;
-    background-image: url('./../imagenes/background.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.contenedor--banner{
-    width: 90%;
-    margin-inline:auto ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
+
 @media (min-width:768px) {
     .contenedor--banner{
         flex-direction: row;
@@ -568,78 +559,279 @@ body{
     width: 100%;
     object-fit: cover;
 }
+
+.titulo-tabla {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .iconos-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .titulo-iconos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      width: 200px;
+    }
+
+    .titulo-iconos:hover {
+      transform: scale(1.1);
+    }
+
+    .iconos-tabla {
+      width: 120px;
+      height: auto;
+    }
+
+    .titulo-icon {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: color 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .titulo-iconos:hover .titulo-icon {
+      color: blue;
+    }
+    .logi {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+.my-logi {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .my-menu {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #1e8d0f;
+      padding: 10px 30px;
+      margin: 0;
+      width: 100%;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+     
+    }
+
+    .my-menu-item {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin-right: 10px;
+      cursor: pointer;
+      padding: 10px;
+
+    }
+
+    .my-menu-item i {
+      margin-right: 5px;
+      text-decoration: none;
+    }
+
+    .my-menu-item {
+      text-decoration: none;
+    }
+
+    .my-form-container {
+      display: none;
+      position: fixed;
+      
+     
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      max-width: 80%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .my-form-container.active {
+      display: block;
+    }
+
+    .my-form-container h4 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+
+    .my-form-container input[type="text"],
+    .my-form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .my-form-container button[type="submit"] {
+      background: #097e3d;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .my-form-container .my-error {
+      color: red;
+      margin-bottom: 10px;
+    }
+    
+        .full-width {
+            display: flex;
+      justify-content: flex-end;
+      background-color: #1e8d0f;
+      padding: 10px 30px;
+      margin: 0;
+      width: 100%;
+      text-decoration: none;
+      position: relative;
+}
+
+
+  .full-height{
+    min-height: 100vh;
+  }
+  section{
+    width: 100%;
+  }
 </style>
 </head>
 
-
 <body>
-  <nav class="menu">
-    <section class="menu__container">
-        <h1 class="menu__logo">paneleros del futuro</h1>
-
-        <ul class="menu__links">
+    
+   <header>
+    <nav>
+        <div class="my-logi">
+          <div class="my-menu">
+            <div class="my-menu-item" id="menu-login">
+              <i class="fas fa-sign-in-alt"></i>
+              Iniciar sesión
+            </div>
+            <div class="my-menu-item" id="menu-registration">
+              <i class="fas fa-user-plus"></i>
+              Registrarse
+            </div>
+            <a href="#" class="my-menu-item" id="menu-noticias">
+              <i class="fas fa-newspaper"></i>
+              Noticias
+            </a>
+            <a href="#" class="my-menu-item" id="menu-contacto">
+              <i class="fas fa-envelope"></i>
+              Contacto
+            </a>
+          </div>
+        </div>
+    
+        <div id="login-form" class="my-form-container">
+          <h4>Iniciar sesión</h4>
+          <form id="login-form-validation">
+            <input type="text" id="login-username" placeholder="Nombre de usuario" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+          </form>
+          <div id="login-error" class="my-error"></div>
+          <div class="close-button" id="login-close-button"><i class="fas fa-times"></i></div>
+        </div>
+    
+        <div id="registration-form" class="my-form-container">
+          <h4>Registrarse</h4>
+          <form id="registration-form-validation">
+            <input type="text" id="registration-username" placeholder="Nombre de usuario" required>
+            <input type="password" id="registration-password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+          </form>
+          <div id="registration-error" class="my-error"></div>
+          <div class="close-button" id="registration-close-button"><i class="fas fa-times"></i></div>
+        </div>
+      </nav>
+    </header>
+    
+    <nav class="menu">
+        <section class="menu__container">
+          <div class="logo">
+            <img src="/cana_panelera/logo panela.png" alt="Logo">
+            <h1 class="menu__logo">agrocaña</h1>
+          </div>
+          <ul class="menu__links">
             <li class="menu__item">
-                <a href="#" class="menu__link">inicio</a>
+              <a href="#" class="menu__link">inicio</a>
             </li>
-
             <li class="menu__item menu__item--show">
-                <a href="#" class="menu__link">About <img src="/arrow.svg" class="menu__arrow"></a>
-
-                <ul class="menu__nesting">
-                    <li class="menu__inside">
-                        <a href="#foro" class="menu__link menu__link--inside">foro comunidad</a>
-                    </li>
-                    <li class="menu__inside">
-                        <a href="#" class="menu__link menu__link--inside">About 2</a>
-                    </li>
-                    <li class="menu__inside">
-                        <a href="#" class="menu__link menu__link--inside">About 3</a>
-                    </li>
-                </ul>
+              <a href="#" class="menu__link">Datos informativos <img src="/cana_panelera/arrow.svg" class="menu__arrow"></a>
+              <ul class="menu__nesting">
+                <li class="menu__inside">
+                  <a href="#foro" class="menu__link menu__link--inside">foro comunidad</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="#" class="menu__link menu__link--inside">About 2</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="#" class="menu__link menu__link--inside">About 3</a>
+                </li>
+              </ul>
             </li>
-
             <li class="menu__item  menu__item--show">
-                <a href="#" class="menu__link">Projects  <img src="/arrow.svg" class="menu__arrow"></a>
-
-                <ul class="menu__nesting">
-                    <li class="menu__inside">
-                        <a href="#" class="menu__link menu__link--inside">Projects 1</a>
-                    </li>
-                    <li class="menu__inside">
-                        <a href="#" class="menu__link menu__link--inside">Projects 2</a>
-                    </li>
-                    <li class="menu__inside">
-                        <a href="#" class="menu__link menu__link--inside">Projects 3</a>
-                    </li>
-                </ul>
+              <a href="#" class="menu__link">Projects  <img src="/cana_panelera/arrow.svg" class="menu__arrow"></a>
+              <ul class="menu__nesting">
+                <li class="menu__inside">
+                  <a href="#" class="menu__link menu__link--inside">Projects 1</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="#" class="menu__link menu__link--inside">Projects 2</a>
+                </li>
+                <li class="menu__inside">
+                  <a href="#" class="menu__link menu__link--inside">Projects 3</a>
+                </li>
+              </ul>
             </li>
-
-            <li class="menu__item">
-                <a href="#" class="menu__link">Contactanos</a>
-            </li>
-
+        </ul>
         </ul>
 
-        <div class="menu__hamburguer">
-            <img src="/menu.svg" class="menu__img">
-        </div>
-    </section>
+          </ul>
 
-  
-</nav>
+          <div class="menu__hamburguer">
+            <img src="/cana_panelera/menu.svg" class="menu__img">
+          </div>
+        </section>
+      </nav>
+      
   <header class="contenedor">
     <video class="background" width="640" height="480" autoplay muted loop playsinline>
-        <source src="/video1.mp4" type="video/mp4">
+        <source src="/cana_panelera/video1.mp4" type="video/mp4">
        
     </video>
     <div class="banner">
         <div class="header">
             <div class="logo">
-                <img src="/logo panela.png" alt="Logo">
+                <img src="/cana_panelera/logo panela.png" alt="Logo">
             </div>
             <div class="user">
                 <div id="icono" class="user--icono">
-                    <img src="/Mi proyecto.png" alt="Icono goku">
+                    <img src="/cana_panelera/Mi proyecto.png" alt="Icono goku">
                 </div>
                 
             </div>
@@ -649,7 +841,12 @@ body{
                 <div class="informacion--contenido">
                     
                     <div>
-                        <p class="informacion--parrafo">Información general sobre el proyecto</p>
+                        <p class="informacion--parrafo">La aplicación web ayuda a los usuarios a mejorar <br>
+                            la producción de caña de panelera mediante el conocimiento  <br>
+                            de buenas prácticas culturales. Proporciona información sobre <br> 
+                            Proporciona información sobre  siembra, riego, fertilización, <br>
+                            protección contra plagas y enfermedades,<br>
+                            y datos nacionales acerca del cultivo y la produccion de panela.</p>
                         
                         <div class="date">
                           <span id="weekDay" class="weekDay"></span>, 
@@ -671,10 +868,10 @@ body{
             </div>
             <div class="animacion">
                 <div class="goku">
-                    <img src="/Mi proyecto.png" alt="Goku imagen">
+                    <img src="/cana_panelera/Mi proyecto.png" alt="Goku imagen">
                 </div>
                 <div class="rayos">
-                    <img src="/rayos.png" alt="Rayos imagen">
+                    <img src="/cana_panelera/rayos.png" alt="Rayos imagen">
                 </div>
                 
             </div>
@@ -683,185 +880,206 @@ body{
     </div>
     
 </header>
- 
- 
- 
-   
-  <section class="bg-gray-700 py-8">
+
+
+<section class="bg-gray-700 py-8">
     <div class="container mx-auto px-2">
       <section class="py-10 bg-gray-100">
-        <div class="container mx-auto">
+        <div class="container mx-auto w-full">
           <h2 class="text-3xl font-bold mb-4">Introducción</h2>
-          <p class="text-lg text-gray-700">
-            Las buenas prácticas agrícolas (BPA) es el nombre que reciben una serie de actividades y prácticas aplicadas a la producción de frutas, hortalizas y demás cultivos, encaminadas a asegurar la calidad del producto entregado al consumidor. Las BPA se encuentran asociadas al desarrollo sostenible, así pues se debe buscar que la producción agrícola sea amigable con el medio ambiente.
-          </p>
           <div class="overflow-hidden" id="introContent">
-            <p class="text-lg text-gray-700 mt-4">
+            <p class="text-lg text-gray-700">
+              Las buenas prácticas agrícolas (BPA) es el nombre que reciben una serie de actividades y prácticas aplicadas a la producción de frutas, hortalizas y demás cultivos, encaminadas a asegurar la calidad del producto entregado al consumidor. Las BPA se encuentran asociadas al desarrollo sostenible, así pues se debe buscar que la producción agrícola sea amigable con el medio ambiente.
+            </p>
+            <p class="text-lg text-gray-700 mt-4 hidden" id="extraContent">
               Para que un sistema de producción agrícola sea sustentable es necesaria la sinergia entre los aspectos sociales, tecnológicos, económicos y ecológicos. Desde lo social, se debe garantizar que los sistemas productivos sean incluyentes con la población local, generando mejores condiciones de vida para la comunidad. A nivel tecnológico se deben utilizar semillas e insumos y maquinaria adaptada a las necesidades del productor, del cultivo y que garanticen una producción amigable con el medio ambiente. En cuanto a factores económicos, se deben tener en cuenta los gastos asociados a la producción y hacer una planificación detallada del cultivo. Los tres aspectos anteriores deben ir encaminados a garantizar el desarrollo sostenible del área de producción.
             </p>
-            <p class="text-lg text-gray-700 mt-4">
+            <p class="text-lg text-gray-700 mt-4 hidden" id="extraContent2">
               Para implementar las BPA se debe tener en cuenta los distintos elementos que conforman el sistema productivo, con el fin de alcanzar el objetivo final: garantizar la producción de un alimento o una materia prima inocua.
             </p>
+            <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" id="toggleBtn" onclick="toggleContent()">Leer más</button>
           </div>
-          <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" id="toggleBtn">Leer más</button>
         </div>
       </section>
-          <div class="bg-gray-200 p-4">
-            <h2 class="text-2xl font-bold mb-4">Manejo Integrado de Plagas</h2>
-            
-            <p class="mb-2">Utiliza métodos biológicos para el control de plagas.</p>
-            <p class="mb-2">Implementa prácticas culturales adecuadas para prevenir la proliferación de plagas.</p>
-            <p class="mb-2">Emplea productos químicos de forma responsable y siguiendo las recomendaciones de expertos.</p>
-          </div>
-          
-          <div class="bg-gray-200 p-4 mt-4">
-            <h2 class="text-2xl font-bold mb-4">Monitoreo de Plagas</h2>
-            
-            <p class="mb-2">Realiza un monitoreo regular de las plagas presentes en tus cultivos.</p>
-            <p class="mb-2">Identifica y registra la presencia de plagas de manera temprana.</p>
-            <p class="mb-2">Toma acciones de control basadas en el umbral de daño económico.</p>
-          </div>
-          
-          <div class="bg-gray-200 p-4 mt-4">
-            <h2 class="text-2xl font-bold mb-4">Fertilización Adecuada</h2>
-            
-            <p class="mb-2">Realiza un análisis de suelo para determinar las necesidades nutricionales de tus cultivos.</p>
-            <p class="mb-2">Aplica fertilizantes de manera balanceada y siguiendo las recomendaciones técnicas.</p>
-            <p class="mb-2">Mantén un seguimiento regular del estado nutricional de las plantas.</p>
-          </div>
-          
-          <div class="bg-gray-200 p-4 mt-4">
-            <h2 class="text-2xl font-bold mb-4">Buenas Prácticas Agrícolas</h2>
-            
-            <ul class="list-disc ml-6">
-              <li class="mb-2">Realiza una adecuada gestión de residuos agrícolas.</li>
-              <li class="mb-2">Implementa estrategias de control de malezas.</li>
-              <li class="mb-2">Practica la rotación de cultivos para prevenir la acumulación de plagas y enfermedades.</li>
-            </ul>
-          </div>
-              
-     </div>
-     
-     <section class="bg-gray-100 py-12">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/foto panela.jpg" alt="Noticia 1" class="w-full">
-            <div class="p-4">
-              <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
-              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+    </div>
+  </section>
+  
+
+           
+       <section>
+          <h4 class="titulo-tabla">Tabla de Contenido</h4>
+  
+    <div class="iconos-menu">
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo1')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Planificacin-del-cultivo.png" alt="Planificacion del cultivo">
+        </a>
+        <h3 class="titulo-icon">Planificación del<br>Cultivo</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo2')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Identificacion-y-gestin-de-riesgos (1).png" alt="Identificacion de riesgos">
+        </a>
+        <h3 class="titulo-icon">Identificación y Gestión<br>de Riesgos</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo3')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Adecuacion y mantenimiento">
+        </a>
+        <h3 class="titulo-icon">Adecuación y Mantenimiento<br>de Áreas, herramientas e instalaciones</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo4')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Aseguramiento-de-la-calidad-del-agua.png" alt="Aseguramiento agua">
+        </a>
+        <h3 class="titulo-icon">Aseguramiento de la<br>Calidad del Agua</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo5')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Manejo-en-cosecha-y-poscosecha.png" alt="Manejo de cosecha">
+        </a>
+        <h3 class="titulo-icon">Manejo en<br>Cosecha y Poscosecha</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo6')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Manejo-integrado-de-plagas-MIP.png" alt="Manejo Integrado de Plagas (MIP)">
+        </a>
+        <h3 class="titulo-icon">Manejo Integrado de<br>Plagas (MIP)</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo7')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Proteccin-del-medio-ambiente.png" alt="Protección del Medio Ambiente">
+        </a>
+        <h3 class="titulo-icon">Protección del<br>Medio Ambiente</h3>
+      </div>
+    </div>
+       </section>
+       <section class="bg-black  w-full">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/cana_panelera/foto panela.jpg" alt="Noticia 1" class="w-full">
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Título de la noticia 1</h3>
+                <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+              </div>
             </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/panela.jpg" alt="Noticia 2" class="w-full">
-            <div class="p-4">
-              <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
-              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/cana_panelera/panela.jpg" alt="Noticia 2" class="w-full">
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Título de la noticia 2</h3>
+                <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+              </div>
             </div>
-          </div>
-          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img src="/cañita.jpg" alt="Noticia 3" class="w-full">
-            <div class="p-4">
-              <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
-              <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+              <img src="/cana_panelera/cañita.jpg" alt="Noticia 3" class="w-full">
+              <div class="p-4">
+                <h3 class="font-bold text-xl mb-2">Título de la noticia 3</h3>
+                <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4 inline-block">Leer más</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-       <section id="foro">
-      <body class="bg-gray-100">
-        <div class="container mx-auto p-4">
-          <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+      </section>
       
-          <!-- Publicaciones -->
-          <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
-            <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
-            <div class="space-y-4">
-              <!-- Ejemplo de publicación -->
-              <div class="flex items-center">
-                <div class="w-8 h-8">
-                  <img class="w-full h-full rounded-full object-cover" src="/foto panela.jpg" alt="Avatar">
+         <section id="foro">
+        <body class="bg-gray-100">
+          <div class="container mx-auto p-4">
+            <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+        
+            <!-- Publicaciones -->
+            <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
+              <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
+              <div class="space-y-4">
+                <!-- Ejemplo de publicación -->
+                <div class="flex items-center">
+                  <div class="w-2 h-2">
+                    <img class="w-2 h-2 rounded-full object-cover" src="/cana_panelera/foto panela.jpg" alt="A">
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
+                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
                 </div>
-                <div class="ml-3">
-                  <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
-                  <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <!-- Fin del ejemplo de publicación -->
+              </div>
+            </div>
+        
+            <!-- Formulario de publicación -->
+            <div class="bg-white rounded-lg shadow-lg p-4 w-full h-full">
+              <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
+              <form id="post-form">
+                <div class="mb-4">
+                  <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
+                  <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
+                  <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
                 </div>
-              </div>
-              <!-- Fin del ejemplo de publicación -->
+                <div class="text-right">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
+                </div>
+              </form>
             </div>
-          </div>
-      
-          <!-- Formulario de publicación -->
-          <div class="bg-white rounded-lg shadow-lg p-4">
-            <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
-            <form id="post-form">
-              <div class="mb-4">
-                <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
-                <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
-                <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
+          </section>
+          <main class="contenedor--main">
+              <h2>LOS PANELEROSDEL FUTURO</h2>
+              <div class="cajas">
+                  <article class="caja">
+                      <div class="caja--imagen">
+                          <img id="foto" src="/cana_panelera/casa-uno.jpg" alt="Imagen casa">
+                      </div>
+                      <div class="caja--info">
+                          <h1>Rem qui doloribus provident.</h1>
+                          <span>lorem: oloribus provident</span>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                      </div>
+                  </article>
+                  <article class="caja">
+                      <div class="caja--imagen">
+                          <img  id="foto" src="/cana_panelera/casa-dos.jpg" alt="Imagen casa">
+                      </div>
+                      <div class="caja--info">
+                          <h1>Rem qui doloribus provident.</h1>
+                          <span>lorem: oloribus provident</span>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                      </div>
+                  </article>
+                  <article class="caja">
+                      <div class="caja--imagen">
+                          <img  id="foto" src="/cana_panelera/casa-tres.jpg" alt="Imagen casa">
+                      </div>
+                      <div class="caja--info">
+                          <h1>Rem qui doloribus provident.</h1>
+                          <span>lorem: oloribus provident</span>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                      </div>
+                  </article>
+                  <article class="caja">
+                      <div class="caja--imagen">
+                          <img  id="foto" src="/cana_panelera/casa-cuatro.jpg" alt="Imagen casa">
+                      </div>
+                      <div class="caja--info">
+                          <h1>Rem qui doloribus provident.</h1>
+                          <span>lorem: oloribus provident</span>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
+                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                      </div>
+                  </article>
               </div>
-              <div class="text-right">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
-              </div>
-            </form>
-          </div>
-        </section>
-        <main class="contenedor--main">
-            <h2>LOS PANELEROSDEL FUTURO</h2>
-            <div class="cajas">
-                <article class="caja">
-                    <div class="caja--imagen">
-                        <img id="foto" src="/casa-uno.jpg" alt="Imagen casa">
-                    </div>
-                    <div class="caja--info">
-                        <h1>Rem qui doloribus provident.</h1>
-                        <span>lorem: oloribus provident</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                    </div>
-                </article>
-                <article class="caja">
-                    <div class="caja--imagen">
-                        <img  id="foto" src="/casa-dos.jpg" alt="Imagen casa">
-                    </div>
-                    <div class="caja--info">
-                        <h1>Rem qui doloribus provident.</h1>
-                        <span>lorem: oloribus provident</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                    </div>
-                </article>
-                <article class="caja">
-                    <div class="caja--imagen">
-                        <img  id="foto" src="/casa-tres.jpg" alt="Imagen casa">
-                    </div>
-                    <div class="caja--info">
-                        <h1>Rem qui doloribus provident.</h1>
-                        <span>lorem: oloribus provident</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                    </div>
-                </article>
-                <article class="caja">
-                    <div class="caja--imagen">
-                        <img  id="foto" src="/casa-cuatro.jpg" alt="Imagen casa">
-                    </div>
-                    <div class="caja--info">
-                        <h1>Rem qui doloribus provident.</h1>
-                        <span>lorem: oloribus provident</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                        <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                    </div>
-                </article>
-            </div>
-        </main>
-    <footer class="bg-gray-900 text-white py-8">
+    </main>
+    <footer class="bg-gray-900 text-white h-full">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
           <div class="w-full lg:w-6/12 px-4">
@@ -898,6 +1116,7 @@ body{
         </div>
       </div>
     </footer>
-    <script src="/src/app.js"></script>
+  
+    <script src="/cana_panelera/src/app.js"></script>
 </body>
 </html>
