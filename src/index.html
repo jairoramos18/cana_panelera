@@ -24,7 +24,7 @@
 .date, .clock {
   color: #fff;
   font-family: 'Oswald', sans-serif;
-      font-size: x-large;
+  font-size: x-large;
 }
 
 
@@ -285,13 +285,15 @@ body{
 .menu{
     
     color: #fff;
-    height: 90px;
+    height: 70px;
     text-transform: uppercase;
     position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #135a13;
+      background-color: #176817;
+      font-size: larger;
+      font-family: 'Oswald', sans-serif
    
 }
 
@@ -447,6 +449,7 @@ body{
 .menu {
   position: relative;
   z-index: 99999;
+font-size: large;
 } 
 .background {
   opacity: 1;
@@ -623,13 +626,14 @@ body{
     .my-menu {
       display: flex;
       justify-content: flex-end;
-      background-color: #1e8d0f;
-      padding: 10px 30px;
+      background-color: #173b12;
+      padding: 5px 20px;
       margin: 0;
       width: 100%;
       text-decoration: none;
       position: relative;
       z-index: 1;
+      height: 40px;
      
     }
 
@@ -760,6 +764,116 @@ body{
   p{
     margin: 0 0 px;
   }
+
+  .contenedor--main {
+  padding: 20px;
+}
+
+/* Estilos para los títulos */
+h2 {
+  
+  margin-bottom: 20px;
+}
+
+/* Estilos para las cajas */
+.cajas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.caja {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #033903;
+  color: white;
+}
+
+/* Estilos para las imágenes */
+.caja--imagen {
+  text-align: center;
+}
+
+.caja--imagen img {
+  max-width: 100%;
+  height: auto;
+  width: 500px;
+  height: 100px;
+}
+
+/* Estilos para la información */
+.caja--info {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+.btn--descripcion {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li {
+  margin-bottom: 5px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .caja {
+    width: 100%;
+  }
+}
+
+
   
 </style>
 </head>
