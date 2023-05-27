@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f53c4d8d7b.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
   <title>AGRO CAÑA</title>
   <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
   <style>
@@ -21,6 +23,8 @@
 
 .date, .clock {
   color: #fff;
+  font-family: 'Oswald', sans-serif;
+      font-size: x-large;
 }
 
 
@@ -271,7 +275,8 @@ img{
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
+      font-size: x-large;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -280,14 +285,14 @@ body{
 .menu{
     
     color: #fff;
-    height: 70px;
+    height: 90px;
     text-transform: uppercase;
     position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background-color: #135a13;
-    
+   
 }
 
 .menu__container{
@@ -752,6 +757,10 @@ body{
     color: #ff0000; /* Cambia el color a tu elección */
     vertical-align: middle;
   }
+  p{
+    margin: 0 0 px;
+  }
+  
 </style>
 </head>
 
@@ -881,7 +890,7 @@ body{
                             Proporciona información sobre  siembra, riego, fertilización, <br>
                             protección contra plagas y enfermedades,<br>
                             y datos nacionales acerca del cultivo y la produccion de panela.</p>
-                        
+                        <br><br>
                         <div class="date">
                           <span id="weekDay" class="weekDay"></span>, 
                           <span id="day" class="day"></span> de
@@ -920,9 +929,10 @@ body{
     <div class="container mx-auto px-2">
       <section class="py-10 bg-gray-100">
         <div class="container mx-auto w-full">
-          <h2 class="text-3xl font-bold mb-4">Introducción</h2>
+          <h2 class="text-3xl font-bold mb-4  font-family: 'Oswald', sans-serif;
+          font-size: x-large;"  >Introducción</h2>
           <div class="overflow-hidden" id="introContent">
-            <p class="text-lg text-gray-700">
+            <p class="text-3xl text-gray-700">
               Las buenas prácticas agrícolas (BPA) es el nombre que reciben una serie de actividades y prácticas aplicadas a la producción de frutas, hortalizas y demás cultivos, encaminadas a asegurar la calidad del producto entregado al consumidor. Las BPA se encuentran asociadas al desarrollo sostenible, así pues se debe buscar que la producción agrícola sea amigable con el medio ambiente.
             </p>
             <p class="text-lg text-gray-700 mt-4 hidden" id="extraContent">
@@ -955,21 +965,21 @@ body{
         <a href="#" onclick="scrollToElement('.titulo2')">
           <img class="iconos-tabla" src="/cana_panelera/img/Identificacion-y-gestin-de-riesgos (1).png" alt="Identificacion de riesgos">
         </a>
-        <h3 class="titulo-icon">Identificación y Gestión<br>de Riesgos</h3>
+        <h3 class="titulo-icon">Adecuación y Preparación <br>del Terreno</h3>
       </div>
   
       <div class="titulo-iconos">
         <a href="#" onclick="scrollToElement('.titulo3')">
           <img class="iconos-tabla" src="/cana_panelera/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Adecuacion y mantenimiento">
         </a>
-        <h3 class="titulo-icon">Adecuación y Mantenimiento<br>de Áreas, herramientas e instalaciones</h3>
+        <h3 class="titulo-icon">Siembra de la <br> semilla</h3>
       </div>
   
       <div class="titulo-iconos">
         <a href="#" onclick="scrollToElement('.titulo4')">
           <img class="iconos-tabla" src="/cana_panelera/img/Aseguramiento-de-la-calidad-del-agua.png" alt="Aseguramiento agua">
         </a>
-        <h3 class="titulo-icon">Aseguramiento de la<br>Calidad del Agua</h3>
+        <h3 class="titulo-icon">Riego y manejo <br>del agua</h3>
       </div>
   
       <div class="titulo-iconos">
@@ -1280,12 +1290,12 @@ body{
               <img id="foto-s" src="/cana_panelera/foto panela.jpg" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
             </div>
             </div>
-          <!-- <main class="contenedor--main">
+           <main class="contenedor--main">
               <h2>LOS PANELEROSDEL FUTURO</h2>
               <div class="cajas">
                   <article class="caja">
                       <div class="caja--imagen">
-                          <img id="foto" src="/cana_panelera/casa-uno.jpg" alt="Imagen casa">
+                          <img id="foto" src="/cana_panelera/cañita.jpg" alt="Imagen casa">
                       </div>
                       <div class="caja--info">
                           <h1>Rem qui doloribus provident.</h1>
@@ -1296,7 +1306,7 @@ body{
                   </article>
                   <article class="caja">
                       <div class="caja--imagen">
-                          <img  id="foto" src="/cana_panelera/casa-dos.jpg" alt="Imagen casa">
+                          <img  id="foto" src="/cana_panelera/panela.jpg" alt="Imagen casa">
                       </div>
                       <div class="caja--info">
                           <h1>Rem qui doloribus provident.</h1>
@@ -1307,7 +1317,7 @@ body{
                   </article>
                   <article class="caja">
                       <div class="caja--imagen">
-                          <img  id="foto" src="/cana_panelera/casa-tres.jpg" alt="Imagen casa">
+                          <img  id="foto" src="/cana_panelera/proceso caña.jpg" alt="Imagen casa">
                       </div>
                       <div class="caja--info">
                           <h1>Rem qui doloribus provident.</h1>
@@ -1318,7 +1328,7 @@ body{
                   </article>
                   <article class="caja">
                       <div class="caja--imagen">
-                          <img  id="foto" src="/cana_panelera/casa-cuatro.jpg" alt="Imagen casa">
+                          <img  id="foto" src="/cana_panelera/hombre cargando.jpg" alt="Imagen casa">
                       </div>
                       <div class="caja--info">
                           <h1>Rem qui doloribus provident.</h1>
@@ -1328,7 +1338,7 @@ body{
                       </div>
                   </article>
               </div>
-    </main> -->
+    </main> 
     <footer class="bg-gray-900 text-white h-full">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
