@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/cana_panelera/dist/output.css">
-  <link rel="icon" href="/logo panela.png">
+  <link rel="icon" href="/cana_panelera/logo panela.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f53c4d8d7b.js" crossorigin="anonymous"></script>
-  <title>PANELEROS DEL FUTURO</title>
+  <title>AGRO CAÑA</title>
   <!-- SI NO LES SIRVE EL CSS CAMBIEN DE NUEVO LAS RUTAS DE TODO IMAGEN,VIDEO,DIST ETC -->
   <style>
  *{
@@ -718,6 +718,40 @@ body{
   section{
     width: 100%;
   }
+  #foto-s {
+  max-width: 100%; /* Ajusta el valor para controlar el tamaño máximo de las imágenes */
+ width: 50%;
+ height: 50%;
+  display: block;
+  margin: 0 auto;
+ 
+  border-radius: 4px; /* Agrega bordes redondeados */
+  padding: 5px; /* Agrega un espacio alrededor de la imagen */
+}
+
+  /* Importar la fuente Roboto desde Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  /* Aplicar la fuente y aumentar el tamaño de los párrafos */
+  /* Estilos para el título */
+  .title-container1 {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-logo1 {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+
+  .title-text1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000; /* Cambia el color a tu elección */
+    vertical-align: middle;
+  }
 </style>
 </head>
 
@@ -958,8 +992,22 @@ body{
         </a>
         <h3 class="titulo-icon">Protección del<br>Medio Ambiente</h3>
       </div>
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo8')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Manejo-integrado-de-plagas-MIP.png" alt="Manejo Integrado de Plagas (MIP)">
+        </a>
+        <h3 class="titulo-icon">Manejo Integrado de<br>Plagas (MIP)</h3>
+      </div>
+  
+      <div class="titulo-iconos">
+        <a href="#" onclick="scrollToElement('.titulo9')">
+          <img class="iconos-tabla" src="/cana_panelera/img/Proteccin-del-medio-ambiente.png" alt="Protección del Medio Ambiente">
+        </a>
+        <h3 class="titulo-icon">Protección del<br>Medio Ambiente</h3>
+      </div>
     </div>
-       </section>
+    
+       <!-- </section>
        <section class="bg-black  w-full">
         <div class="container mx-auto">
           <h2 class="text-3xl font-bold text-gray-800 mb-4">Noticias y eventos</h2>
@@ -990,7 +1038,7 @@ body{
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       
          <section id="foro">
         <body class="bg-gray-100">
@@ -1030,7 +1078,209 @@ body{
               </form>
             </div>
           </section>
-          <main class="contenedor--main">
+          <div class="container mx-auto px-4 py-8">
+            <div class="title-container1">
+              <img class="title-logo1" src="/cana_panelera/img/Planificacin-del-cultivo.png" alt="Logo">
+              <h1 class="title-text1">Planificación del Cultivo</h1>
+            </div>
+            <br>
+            <p>El análisis de riesgos es una labor de planeación crucial que...</p>
+            <ul class="list-disc ml-6 mb-6">
+              <li>Conocer la historia de la unidad productiva, los tipos de cultivos que han existido, los agroquímicos aplicados y las plagas que se han presentado, así como la dedicación agropecuaria o forestal.</li>
+              <li>Evaluar las condiciones climáticas, incluyendo la temperatura, humedad, precipitaciones, entre otros, así como la geografía del suelo.</li>
+              <li>Valorar la disponibilidad de personal calificado para las labores propias del cultivo.</li>
+              <li>Realizar análisis fisicoquímico del suelo y del agua.</li>
+              <li>Realizar el análisis de riesgos frente a la unidad productiva.</li>
+            </ul>
+            <p>El análisis de riesgos es fundamental para identificar los posibles peligros y amenazas que podrían afectar la producción agrícola, así como para establecer medidas de mitigación y estrategias de manejo adecuadas.</p>
+            <img id="foto-s" src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+          </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Logo">
+              <h1 class="title-text1">Adecuación y Preparación del Terreno</h1>
+              </div>
+              <div></div>
+              <p>La adecuación y preparación del terreno consiste en las labores de campo necesarias para facilitar un ambiente óptimo de germinación para las semillas y el buen desarrollo de las plantas de caña, asegurando una correcta relación entre la disponibilidad de recurso hídrico, aireación, nutrientes y drenaje. Estas labores se ejecutan principalmente en renuevo o levante de socas.</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Considerar la pendiente del terreno.</li>
+                <li>Mejorar la aireación del suelo mediante la incorporación de materia orgánica o practicando labranza cero.</li>
+                <li>Evitar la erosión y compactación del suelo.</li>
+                <li>Utilizar técnicas apropiadas de labranza, ya sea manual, mecánica o animal.</li>
+                <li>Colocar abonos orgánicos bien descompuestos antes de incorporarlos al suelo.</li>
+                <li>En el caso de desinfectar el suelo, tener en cuenta el tiempo de acción del agroquímico antes de sembrar.</li>
+              </ul>
+          
+              <p>La adecuación y preparación del terreno es fundamental para proporcionar a las plantas de caña un entorno propicio que promueva su crecimiento saludable y óptimo rendimiento.</p>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Proteccin-del-medio-ambiente.png" alt="Logo">
+              <h1 class="title-text1">Siembra de la semilla</h1>
+              </div>
+              <div></div>
+              <p>Para esta labor es necesario seleccionar las variedades de caña a sembrar de acuerdo a las características de adaptabilidad y productividad deseadas, así como a las resistencias a enfermedades presentes en la zona donde se desea sembrar.</p>
+          
+              <p>Una vez que el terreno ha sido propiamente surcado, con surcos espaciados a una distancia de 1,65 m, se procede a la siembra. La siembra se realiza depositando esquejes, que son trozos de tallo de aproximadamente 60 cm de longitud y que presentan entre 3 y 4 yemas. Estos esquejes vienen en paquetes de 30 trozos.</p>
+          
+              <p>Posteriormente, se cubre la siembra con una delgada capa de suelo de aproximadamente 5 cm de espesor.</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Seleccionar variedades de caña adaptadas y productivas, con resistencia a enfermedades de la zona.</li>
+                <li>Realizar surcos espaciados a una distancia de 1,65 m.</li>
+                <li>Depositar esquejes de tallo de aproximadamente 60 cm con 3 a 4 yemas por surco.</li>
+                <li>Cubrir la siembra con una capa delgada de suelo de aproximadamente 5 cm de espesor.</li>
+              </ul>
+          
+              <p>La siembra adecuada de los esquejes de caña de azúcar es crucial para establecer una plantación saludable y productiva.</p>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Aseguramiento-de-la-calidad-del-agua.png" alt="Logo">
+              <h1 class="title-text1">Riego y manejo del agua</h1>
+              </div>
+              <p>Después de culminar la siembra, en plantillas, se busca proporcionar un riego de germinación lo más pronto posible al cultivo para garantizar una buena germinación de las semillas. La frecuencia y cantidad de riego se determinan según los requerimientos del terreno y la variedad de caña de azúcar utilizada.</p>
+          
+              <p>En el caso de las socas, se aplica un riego de levantamiento hasta 60 días después del corte, dependiendo de la resiembra. A partir de ahí, se continúa regando hasta aproximadamente los 10 meses de edad del cultivo. Se recomienda suspender los riegos después de esta etapa, ya que la planta comienza una etapa de aumento de sacarosa en las variedades con edades de corte entre 12 y 13 meses.</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Realizar un riego de germinación lo más pronto posible después de la siembra en plantillas.</li>
+                <li>Determinar la frecuencia y cantidad de riego según los requerimientos del terreno y la variedad de caña.</li>
+                <li>Aplicar un riego de levantamiento en las socas hasta 60 días después del corte.</li>
+                <li>Continuar regando hasta aproximadamente los 10 meses de edad del cultivo.</li>
+                <li>Para variedades con edades de corte entre 12 y 13 meses, suspender los riegos después de esta etapa debido al aumento de sacarosa en la planta.</li>
+              </ul>
+          
+              <p>El riego adecuado durante las etapas de siembra y cultivo de la caña de azúcar es esencial para garantizar un desarrollo saludable y productivo de las plantas.</p>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Manejo-en-cosecha-y-poscosecha.png" alt="Logo">
+              <h1 class="title-text1">Fertilización del cultivo</h1>
+              </div>
+              <p>Los suelos sembrados con caña de azúcar requieren elementos nutricionales adicionales a ciertas edades para asegurar el buen desarrollo del cultivo. La fertilización se realiza de forma mecánica o manual, aplicando diferentes fuentes de nutrientes según las necesidades de la planta.</p>
+          
+              <p>Para aportar nitrógeno al cultivo de caña de azúcar, se pueden utilizar las siguientes fuentes:</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Solución UAN (Urea y nitrato de amonio)</li>
+                <li>Urea</li>
+                <li>Sulfato de amonio</li>
+                <li>Fosfato diamónico</li>
+              </ul>
+          
+              <p>En cuanto al fósforo, se pueden aplicar las siguientes fuentes de nutrientes:</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Superfosfato triple</li>
+                <li>Fosfato diamónico</li>
+                <li>Roca fosfórica</li>
+              </ul>
+          
+              <p>Para el aporte de potasio, se pueden utilizar las siguientes fuentes:</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Cloruro de potasio (KCL)</li>
+                <li>Sulfato de potasio</li>
+                <li>Vinaza</li>
+              </ul>
+          
+              <p>La elección de las fuentes de nutrientes y las dosis a aplicar dependerá de las necesidades específicas de cada cultivo y de los análisis de suelo realizados. La fertilización adecuada es fundamental para asegurar un buen desarrollo y rendimiento del cultivo de caña de azúcar.</p>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Manejo-integrado-de-plagas-MIP.png" alt="Logo">
+              <h1 class="title-text1">Control de malezas</h1>
+              </div>
+              <p>El control de malezas en el cultivo de caña de azúcar es crucial para garantizar un buen desarrollo y rendimiento de las plantas. Las malezas son plantas que crecen en el lugar del cultivo y compiten por los nutrientes del suelo destinados para la caña, lo que puede disminuir la producción y aumentar los costos de las labores agrícolas.</p>
+          
+              <p>Es importante priorizar el control de malezas durante la etapa inicial de crecimiento de la caña. Durante esta fase, las malezas tienen un crecimiento rápido y tienen la capacidad de sobrevivir en condiciones adversas. Si no se controlan adecuadamente, pueden reducir la densidad de población y la producción del cultivo en un estimado del 30 al 40%.</p>
+          
+              <p>Existen diferentes métodos de control de malezas que pueden utilizarse en el cultivo de caña de azúcar, como:</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Labores mecánicas de deshierbe, como el uso de maquinaria o herramientas manuales para eliminar las malezas.</li>
+                <li>Aplicación de herbicidas selectivos que controlan las malezas sin dañar la caña de azúcar.</li>
+                <li>Mantenimiento de un adecuado sistema de drenaje para evitar la proliferación de malezas acuáticas.</li>
+                <li>Uso de cobertura vegetal, como la siembra de cultivos de cobertura o la aplicación de mulch, para reducir el crecimiento de malezas.</li>
+              </ul>
+          
+              <p>Es importante contar con un plan de manejo de malezas que considere las especies de malezas presentes en la zona, las técnicas de control más adecuadas y los momentos oportunos para realizar las labores de control. De esta manera, se puede minimizar la competencia de las malezas y maximizar el rendimiento del cultivo de caña de azúcar.</p>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Manejo-integrado-de-plagas-MIP.png" alt="Logo">
+              <h1 class="title-text1">Control de plagas y enfermedades</h1>
+              </div>
+              <p>El cultivo de caña de azúcar puede verse afectado por diversas plagas y enfermedades que pueden causar daños significativos en el desarrollo y rendimiento de las plantas. Es esencial mantener un control adecuado para prevenir pérdidas económicas y garantizar una producción saludable. Esto se logra a través de un cuidadoso monitoreo y constante inspección en el campo para detectar irregularidades a tiempo y tomar medidas oportunas.</p>
+          
+              <h2 class="text-2xl font-bold mt-6 mb-2">Plagas más comunes</h2>
+              <ul class="list-disc ml-6 mb-6">
+                <li>Barrenadores del tallo (Diatrea spp.): Se puede realizar control biológico liberando larvas de moscas Metagonistylum o avispas Trichogramma, que actúan como depredadores.</li>
+                <li>Salivazo de la caña de azúcar (Aeneolamia varia): Se controla mediante el uso de microorganismos patógenos y, en algunos casos, insecticidas sintéticos.</li>
+                <li>Termitas subterráneas (Reticulitermes flavipes): Su control se realiza mediante la aplicación de insecticidas en el suelo y buenas prácticas de roturación del terreno.</li>
+              </ul>
+          
+              <h2 class="text-2xl font-bold mt-6 mb-2">Enfermedades más comunes</h2>
+              <ul class="list-disc ml-6 mb-6">
+                <li>Virus Mosaico del tipo Potyvirus: Se recomienda eliminar las plantas enfermas y utilizar semillas previamente tratadas.</li>
+                <li>Fitoplasmas de hoja amarilla luteovirus: Se recomienda aplicar termoterapia y cultivar tejidos resistentes.</li>
+                <li>Bacterias Escaldadura foliar (Xanthomonas): Se sugiere utilizar material de siembra sano, desinfectar las herramientas de corte y realizar un tratamiento con remojo en agua fría seguido de agua caliente.</li>
+                <li>Raquitismo de la soca (Leifsonia xyli): Se recomienda utilizar semillas tratadas y desinfectar las herramientas que entren en contacto con la semilla.</li>
+                <li>Hongo Carbón (Ustilago scitaminea): Se recomienda establecer semilleros sanos y tratar la semilla con triadimefón.</li>
+                <li>Roya común (Puccinia melanocephala): Se recomienda establecer semilleros sanos y aplicar fertilizantes nitrogenados.</li>
+              </ul>
+              <img id="foto-s"   src="/cana_panelera/Mi proyecto.png" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Planificacin-del-cultivo.png" alt="Logo">
+              <h1 class="title-text1">Aporque</h1>
+              </div>
+              
+              <p>La labor de aporque en el cultivo de caña de azúcar se realiza durante los primeros tres meses de edad de la plantación, después de haber aplicado los fertilizantes necesarios. Consiste en remover tierra de las calles o entresurcos y acumularla en los surcos, incrementando así la altura de estos. El objetivo del aporque es proteger la base de la planta de la humedad del invierno, facilitar el encauce del agua de riego en verano y permitir una mejor evacuación en caso de drenaje.</p>
+              <img id="foto-s"   src="/cana_panelera/cañita.jpg" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+          
+            <div class="container mx-auto px-4 py-8">
+              <div class="title-container1">
+                <img class="title-logo1" src="/cana_panelera/img/Planificacin-del-cultivo.png" alt="Logo">
+              <h1 class="title-text1">Cosecha o corte de la caña</h1>
+              </div>
+          
+              <p>El corte de la caña de azúcar puede ser realizado por los productores y los obreros que trabajan en el cultivo. Se forman frentes de corte, los cuales están compuestos por los cortadores encargados de realizar la labor.</p>
+          
+              <p>El responsable de estos frentes de corte tiene la responsabilidad de cumplir con la normativa de salud y seguridad en el trabajo. Esto implica suministrar los implementos de protección personal necesarios al personal de cosecha y garantizar una hidratación adecuada para esta labor.</p>
+          
+              <p>Es fundamental proporcionar a los cortadores los siguientes elementos de protección personal:</p>
+          
+              <ul class="list-disc ml-6 mb-6">
+                <li>Botas de seguridad</li>
+                <li>Guantes protectores</li>
+                <li>Gafas de protección</li>
+                <li>Casco</li>
+                <li>Ropa de trabajo adecuada</li>
+              </ul>
+          
+              <p>Además, se debe garantizar la hidratación adecuada para el personal de cosecha. Se recomienda proporcionar agua potable en cantidades suficientes y fomentar el consumo regular durante la jornada de trabajo.</p>
+              <img id="foto-s" src="/cana_panelera/foto panela.jpg" alt="Adecuación y Preparación del Terreno" class="h-4 w-4">
+            </div>
+            </div>
+          <!-- <main class="contenedor--main">
               <h2>LOS PANELEROSDEL FUTURO</h2>
               <div class="cajas">
                   <article class="caja">
@@ -1078,7 +1328,7 @@ body{
                       </div>
                   </article>
               </div>
-    </main>
+    </main> -->
     <footer class="bg-gray-900 text-white h-full">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
