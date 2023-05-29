@@ -37,9 +37,7 @@ margin-right: 20px;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-img{
-    width: 80px;
-}
+
 /* Contenedor del banner */
 .contenedor{
     height: 100vh;
@@ -72,8 +70,8 @@ img{
     padding-top: 10px;
 }
 .logo img{
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
 }
 @media (min-width:768px) {
     .logo img{
@@ -88,15 +86,23 @@ img{
     justify-content: center;
     gap: 5px;
 }
+/* cambiar si algo */
 .user--icono{
-    background-color: white;
+     background-color: white;
    border-radius: 50%;
-   border: 3px solid blue;
-   padding: 5px; 
+   border: 3px solid rgb(16, 169, 29);
+   padding: 5px;  
+  /* position: relative;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid rgb(16, 169, 29);
+  padding: 5px; */
 }
 .user--icono img{
-    width: 20px;
-    height: 20px;
+    width: 70px;
+    height: 70px;
 }
 .user--nombre{
     font-weight: 700;
@@ -251,7 +257,7 @@ img{
     }
 }
 .rayos img{
-    display: block;
+    
     min-width: 250px;
 }
 @media (min-width:1024px) {
@@ -491,78 +497,7 @@ font-size: large;
 .btn--descripcion:hover{
     background-color: #292B38;
 }
-/* Main */
-.contenedor--main{
-    width: 95%;
-    margin-inline:auto;
-}
-@media (min-width:768px) {
-    .contenedor--main{
-        width: 80%;
-    }
-}
-.cajas{
-    display: grid;
-    gap: 60px;
-}
-@media (min-width:768px) {
-    .cajas{
-        grid-template-columns: 1fr 1fr;
-    }
-}
-.contenedor--main h2{
-    text-align: center;
-    margin-bottom: 60px;
-    font-size: 30px;
-}
-.caja{
-    background-color: #E7E7E7;
-    color: #292B38;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-}
-@media (min-width:992px) {
-    .caja{
-        flex-direction: row;
-        align-items: center;
-    }
-}
-.caja--imagen{
-    width: 80%;
-    margin-top: -40px;
-    height: 100%;
-    margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media (min-width:992px) {
-    .caja--imagen{
-        height: 80%;
-        margin-top: 0;
-        margin-left: -40px;
-    }
-}
-.caja--imagen img{
-    border-radius: 10px;
-}
-.caja--info{
-    padding: 10px;
-    text-align: center;
-    line-height: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-.caja--info h1{
-    font-size: 20px;
-    font-weight: 900;
-}
-.caja--info span{
-    font-weight: 700;
-}
+
 #foto{
     width: 100%;
     object-fit: cover;
@@ -765,64 +700,8 @@ font-size: large;
     margin: 0 0 px;
   }
 
-  .contenedor--main {
-  padding: 20px;
-}
-
-/* Estilos para los títulos */
-h2 {
-  
-  margin-bottom: 20px;
-}
-
-/* Estilos para las cajas */
-.cajas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.caja {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #033903;
-  color: white;
-}
-
-/* Estilos para las imágenes */
-.caja--imagen {
-  text-align: center;
-}
-
-.caja--imagen img {
-  max-width: 100%;
-  height: auto;
-  width: 500px;
-  height: 100px;
-}
-
-/* Estilos para la información */
-.caja--info {
-  margin-top: 20px;
-}
 
 
-
-
-
-
-
-.btn--descripcion {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffcc00;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
 
 /* Estilos para el footer */
 footer {
@@ -866,15 +745,137 @@ footer a {
   text-decoration: none;
 }
 
-/* Estilos para pantallas pequeñas */
-@media screen and (max-width: 768px) {
-  .caja {
-    width: 100%;
+.contenedor--main {
+  width: 100%;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .contenedor--main {
+    width: 80%;
   }
 }
 
+.cajas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-  
+.contenedor--main h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 30px;
+}
+
+.caja {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+.caja--imagen {
+  text-align: center;
+  width: 100%;
+}
+
+.caja--imagen img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-height: 200px;
+  object-fit: contain; 
+}
+
+.caja--info {
+  padding: 10px;
+  text-align: justify;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.caja--info h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.caja--info p {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.btn--descripcion {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.noticias {
+  color: #5f0808;
+  text-transform: uppercase;
+  font-size: x-large;
+  font-family: 'Oswald', sans-serif;
+  align-items: center;
+  text-align: center;
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.scroll-to-top i {
+  color: #000000;
+}
+
+.scroll-to-top:hover {
+  background-color: #f1f1f1;
+}
+
+.scroll-down {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.scroll-down i {
+  color: #000000;
+}
+
+.scroll-down:hover {
+  background-color: #f1f1f1;
+}
+
 </style>
 </head>
 
@@ -944,27 +945,27 @@ footer a {
                   <a href="#foro" class="menu__link menu__link--inside">foro comunidad</a>
                 </li>
                 <li class="menu__inside">
-                  <a href="#titulo_logo" class="menu__link menu__link--inside">About 2</a>
+                  <a href="#Introducionj " class="menu__link menu__link--inside">Introducion</a>
                 </li>
                 <li class="menu__inside">
-                  <a href="#" class="menu__link menu__link--inside">About 3</a>
+                  <a href="#noticia" class="menu__link menu__link--inside">Noticias</a>
                 </li>
               </ul>
             </li>
-            <li class="menu__item  menu__item--show">
-              <a href="#" class="menu__link">Projects  <img src="/arrow.svg" class="menu__arrow"></a>
+             <li class="menu__item  menu__item--show">
+              <a href="#" class="menu__link">Buenas Practicas  <img src="/arrow.svg" class="menu__arrow"></a>
               <ul class="menu__nesting">
                 <li class="menu__inside">
-                  <a href="#" class="menu__link menu__link--inside">Projects 1</a>
+                  <a href="#titulo_logo" class="menu__link menu__link--inside">Cultivo</a>
                 </li>
                 <li class="menu__inside">
-                  <a href="#" class="menu__link menu__link--inside">Projects 2</a>
+                  <a href="#icono-t9" class="menu__link menu__link--inside">Cosecha</a>
                 </li>
                 <li class="menu__inside">
-                  <a href="#" class="menu__link menu__link--inside">Projects 3</a>
+                  <a href="#icono-t7" class="menu__link menu__link--inside">Plagas y Enfermedades</a>
                 </li>
               </ul>
-            </li>
+            </li> 
         </ul>
         </ul>
 
@@ -983,9 +984,9 @@ footer a {
     </video>
     <div class="banner">
         <div class="header">
-            <div class="logo">
+            <!-- <div class="logo">
                 <img src="/logo panela.png" alt="Logo">
-            </div>
+            </div> -->
             <div class="user">
                 <div id="icono" class="user--icono">
                     <img src="/cuchito-removebg-preview.png" alt="Icono goku">
@@ -1018,12 +1019,13 @@ footer a {
                       </div>
                     </div>
                     <div class="informacion--btn">
-                        <button type="button">Ver más</button>
+                        <button id="myButton" type="button"  onclick="scrollToSection() " >Ver más</button>
                     </div>
                 </div>
                 
             </div>
-            <div class="animacion">
+            
+            <!-- <div class="animacion">
                 <div class="goku">
                     <img src="/Mi proyecto.png" alt="Goku imagen">
                 </div>
@@ -1031,7 +1033,7 @@ footer a {
                     <img src="/rayos.png" alt="Rayos imagen">
                 </div>
                 
-            </div>
+            </div> -->
         </div>
         
     </div>
@@ -1039,7 +1041,7 @@ footer a {
 </header>
 
 
-<section class="bg-green-400 py-8">
+<section class="bg-green-400 py-8 introduccion1 " id="Introducionj">
     <div class="container mx-auto px-2">
       <section class="py-10 bg-gray-100">
         <div class="container mx-auto w-full">
@@ -1118,14 +1120,14 @@ footer a {
       </div>
       <div class="titulo-iconos">
         <a href="#icono-t8" onclick="scrollToElement('icono-t8')">
-          <img class="iconos-tabla" src="/img/Manejo-integrado-de-plagas-MIP.png" alt="Manejo Integrado de Plagas (MIP)">
+          <img class="iconos-tabla" src="/img/Bienestar-de-los-trabajadores.png" alt="Manejo Integrado de Plagas (MIP)">
         </a>
         <h3 class="titulo-icon">Aporque</h3>
       </div>
   
       <div class="titulo-iconos">
         <a href="#icono-t9" onclick="scrollToElement('icono-t9')">
-          <img class="iconos-tabla" src="/img/Proteccin-del-medio-ambiente.png" alt="Protección del Medio Ambiente">
+          <img class="iconos-tabla" src="/img/cambios1.png" alt="Protección del Medio Ambiente">
         </a>
         <h3 class="titulo-icon">Cosecha o corte<br>de la Caña</h3>
       </div>
@@ -1164,44 +1166,7 @@ footer a {
         </div>
       </section> -->
       
-         <section id="foro">
-        <body class="bg-gray-100">
-          <div class="container mx-auto p-4">
-            <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
-        
-            <!-- Publicaciones -->
-            <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
-              <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
-              <div class="space-y-4">
-                <!-- Ejemplo de publicación -->
-                <div class="flex items-center">
-                  <div class="w-2 h-2">
-                    <img class="w-2 h-2 rounded-full object-cover" src="/foto panela.jpg" alt="A">
-                  </div>
-                  <div class="ml-3">
-                    <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
-                    <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <!-- Fin del ejemplo de publicación -->
-              </div>
-            </div>
-        
-            <!-- Formulario de publicación -->
-            <div class="bg-white rounded-lg shadow-lg p-4 w-full h-full">
-              <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
-              <form id="post-form">
-                <div class="mb-4">
-                  <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
-                  <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
-                  <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
-                </div>
-                <div class="text-right">
-                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
-                </div>
-              </form>
-            </div>
-          </section>
+  
           <main id="titulo_logo">
           <div class="container mx-auto px-4 py-8">
             <div class="title-container1">
@@ -1224,7 +1189,7 @@ footer a {
           <section id="logo_titulo2">
             <div class="container mx-auto px-4 py-8 titulo2">
               <div class="title-container1">
-                <img class="title-logo1" src="/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Logo">
+                <img class="title-logo1" src="/img/Identificacion-y-gestin-de-riesgos (1).png" alt="Logo">
               <h1 class="title-text1">Adecuación y Preparación del Terreno</h1>
               </div>
               <div></div>
@@ -1246,7 +1211,7 @@ footer a {
           <main id="icono-t3">
             <div class="container mx-auto px-4 py-8">
               <div class="title-container1">
-                <img class="title-logo1" src="/img/Proteccin-del-medio-ambiente.png" alt="Logo">
+                <img class="title-logo1" src="/img/Adecuacin-y-mantenimiento-de-reas-herramientas-e-instalaciones.png" alt="Logo">
               <h1 class="title-text1">Siembra de la semilla</h1>
               </div>
               <div></div>
@@ -1353,7 +1318,7 @@ footer a {
           <main id="icono-t7">
             <div class="container mx-auto px-4 py-8">
               <div class="title-container1">
-                <img class="title-logo1" src="/img/Manejo-integrado-de-plagas-MIP.png" alt="Logo">
+                <img class="title-logo1" src="/img/Proteccin-del-medio-ambiente.png" alt="Logo">
               <h1 class="title-text1">Control de plagas y enfermedades</h1>
               </div>
               <p>El cultivo de caña de azúcar puede verse afectado por diversas plagas y enfermedades que pueden causar daños significativos en el desarrollo y rendimiento de las plantas. Es esencial mantener un control adecuado para prevenir pérdidas económicas y garantizar una producción saludable. Esto se logra a través de un cuidadoso monitoreo y constante inspección en el campo para detectar irregularidades a tiempo y tomar medidas oportunas.</p>
@@ -1380,7 +1345,7 @@ footer a {
             <main id="icono-t8">
             <div class="container mx-auto px-4 py-8">
               <div class="title-container1">
-                <img class="title-logo1" src="/img/Planificacin-del-cultivo.png" alt="Logo">
+                <img class="title-logo1" src="/img/Bienestar-de-los-trabajadores.png" alt="Logo">
               <h1 class="title-text1">Aporque</h1>
               </div>
               
@@ -1391,7 +1356,7 @@ footer a {
           <main id="icono-t9">
             <div class="container mx-auto px-4 py-8">
               <div class="title-container1">
-                <img class="title-logo1" src="/img/Planificacin-del-cultivo.png" alt="Logo">
+                <img class="title-logo1" src="/img/cambios1.png" alt="Logo">
               <h1 class="title-text1">Cosecha o corte de la caña</h1>
               </div>
           
@@ -1414,55 +1379,91 @@ footer a {
             </div>
             </div>
           </main>
-           <main class="contenedor--main" id="noticia">
-              <h2 >Noticias <h2>
-              <div class="cajas">
-                  <article class="caja">
-                      <div class="caja--imagen">
-                          <img id="foto" src="/cañita.jpg" alt="Imagen casa">
+
+          <section id="foro">
+            <body class="bg-gray-100">
+              <div class="container mx-auto p-4">
+                <h2 class="text-2xl font-bold mb-4">Comunidad Agrícola</h2>
+            
+                <!-- Publicaciones -->
+                <div id="posts-container" class="bg-white rounded-lg shadow-lg p-4 mb-6">
+                  <h3 class="text-lg font-semibold mb-2">Publicaciones recientes</h3>
+                  <div class="space-y-4">
+                    <!-- Ejemplo de publicación -->
+                    <div class="flex items-center">
+                      <div class="w-2 h-2">
+                        <img class="w-2 h-2 rounded-full object-cover" src="/foto panela.jpg" alt="A">
                       </div>
-                      <div class="caja--info">
-                          <h1>Rem qui doloribus provident.</h1>
-                          <span>lorem: oloribus provident</span>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
+                      <div class="ml-3">
+                        <p class="text-gray-700 font-semibold">Nombre del Agricultor</p>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                       </div>
-                  </article>
-                  <article class="caja">
-                      <div class="caja--imagen">
-                          <img  id="foto" src="/panela.jpg" alt="Imagen casa">
-                      </div>
-                      <div class="caja--info">
-                          <h1>Rem qui doloribus provident.</h1>
-                          <span>lorem: oloribus provident</span>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                      </div>
-                  </article>
-                  <article class="caja">
-                      <div class="caja--imagen">
-                          <img  id="foto" src="/proceso caña.jpg" alt="Imagen casa">
-                      </div>
-                      <div class="caja--info">
-                          <h1>Rem qui doloribus provident.</h1>
-                          <span>lorem: oloribus provident</span>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                      </div>
-                  </article>
-                  <article class="caja">
-                      <div class="caja--imagen">
-                          <img  id="foto" src="/hombre cargando.jpg" alt="Imagen casa">
-                      </div>
-                      <div class="caja--info">
-                          <h1>Rem qui doloribus provident.</h1>
-                          <span>lorem: oloribus provident</span>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque at delectus sed error eos id, aperiam dolore minus sapiente impedit aliquid!</p>
-                          <a class="btn--descripcion" href="#">Consectetur adipisicing elit</a>                    
-                      </div>
-                  </article>
-              </div>
-    </main> 
+                    </div>
+                    <!-- Fin del ejemplo de publicación -->
+                  </div>
+                </div>
+            
+                <!-- Formulario de publicación -->
+                <div class="bg-white rounded-lg shadow-lg p-4 w-full h-full">
+                  <h3 class="text-lg font-semibold mb-2">Crear publicación</h3>
+                  <form id="post-form">
+                    <div class="mb-4">
+                      <label class="block text-gray-700 font-bold mb-2" for="postContent">Contenido de la publicación:</label>
+                      <textarea class="form-textarea w-full" id="postContent" rows="3" placeholder="Escribe tu publicación aquí..."></textarea>
+                      <p id="contentError" class="text-red-500 text-sm hidden">El contenido es obligatorio.</p>
+                    </div>
+                    <div class="text-right">
+                      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Publicar</button>
+                    </div>
+                  </form>
+                </div>
+              </section>
+          <h2 class="noticias">Noticias</h2>
+          <main class="contenedor--main" id="noticia">
+            <div class="cajas">
+              <article class="caja">
+                <div class="caja--imagen">
+                  <img src="/cuchito.jpg" alt="Imagen casa">
+                </div>
+                <div class="caja--info">
+                  <h1>LOS FRANCO, TRAPICHE QUE CUENTA CON 20 HECTÁREAS DE CAÑA PARA HACER PANELA DE SABORES</h1>
+                  <br>
+                  <p>El trapiche Los Franco es una empresa familiar que nació en 1967 en el Valle del Cauca. Su objetivo es innovar y mostrar que hay varias maneras en las que se puede consumir la panela.</p>
+                  <a class="btn--descripcion" href="https://www.agronegocios.co/agricultura/los-franco-trapiche-que-cuenta-con-20-hectareas-de-cana-para-hacer-panela-de-sabores-3511793" target="_blank">Seguir Leyendo</a>
+                </div>
+              </article>
+              <article class="caja">
+                <div class="caja--imagen">
+                  <img src="/panela.jpg" alt="Imagen casa">
+                </div>
+                <div class="caja--info">
+                  <h1>MÁS DE 60% DE LA CAÑA SE USA PARA HACER PANELA Y 32% PARA LA ELABORACIÓN DE AZÚCAR</h1>
+                  <p>La historia reciente de Colombia se ha movido al ritmo de la caña. Tan solo un par de décadas después de que los colonos arribaran al país, se introdujo este cultivo en 1.510 con plantaciones en Santa María La Antigua del Darién.</p>
+                  <a class="btn--descripcion" href="https://www.agronegocios.co/agricultura/mas-de-60-de-la-cana-se-usa-para-hacer-panela-y-32-para-la-elaboracion-de-azucar-3455719" target="_blank">Seguir Leyendo</a>
+                </div>
+              </article>
+              <article class="caja">
+                <div class="caja--imagen">
+                  <img src="/proceso caña.jpg" alt="Imagen casa">
+                </div>
+                <div class="caja--info">
+                  <h1>AGROINDUSTRIA DE LA CAÑA GENERÓ 1.846 EMPLEOS NUEVOS CON SU PROGRAMA COMPROMISO RURAL</h1>
+                  <p>La agroindustria de la caña gestionó espacios para la promoción de los productos y servicios ofrecidos por los emprendedores del proyecto. Compromiso rural es el programa de la agroindustria de la caña que tiene como objetivo fortalecer las economías locales.</p>
+                  <a class="btn--descripcion" href="https://www.agronegocios.co/agricultura/agroindustria-de-la-cana-genero-1-846-empleos-nuevos-con-su-programa-compromiso-rural-3503058" target="_blank">Seguir Leyendo</a>
+                </div>
+              </article>
+              <article class="caja">
+                <div class="caja--imagen">
+                  <img src="/R.jpg" alt="Imagen casa">
+                </div>
+                <div class="caja--info">
+                  <h1>PRODUCCIÓN DE CAÑA REGISTRÓ ALZA DE 11,2% EN EL PRIMER MES DEL AÑO, SEGÚN ASOCAÑA</h1>
+                  <p>Según cifras de la Asociación de Cultivadores de Caña de Azúcar de Colombia (Asocaña), durante el año pasado hubo una producción de 22,8 millones de toneladas de caña molida. Asimismo, en el primer mes del año, dato del informe más reciente, hubo 2,2 millones de toneladas de este producto.</p>
+                  <a class="btn--descripcion" href="https://www.agronegocios.co/agricultura/produccion-de-cana-registro-alza-de-11-2-en-el-primer-mes-del-ano-segun-asocana-3355245" target="_blank">Seguir Leyendo</a>
+                </div>
+              </article>
+            </div>
+          </main>
     <footer class="bg-gray-900 text-white h-full " id="contacto">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center">
@@ -1500,7 +1501,12 @@ footer a {
         </div>
       </div>
     </footer>
-  
+    <button class="scroll-to-top" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <button class="scroll-down" onclick="scrollToContent()">
+      <i class="fas fa-arrow-down"></i>
+    </button>
     <script src="/src/app.js"></script>
 </body>
 </html>

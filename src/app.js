@@ -94,14 +94,15 @@ function displayPosts() {
 
    // Mostrar las publicaciones iniciales
    displayPosts();
+  
 
-   var udateTime = function() {
+   var updateTime = function() {
     let currentDate = new Date(),
         hours = currentDate.getHours(),
         minutes = currentDate.getMinutes(), 
         seconds = currentDate.getSeconds(),
         weekDay = currentDate.getDay(), 
-        day = currentDate.getDay(), 
+        day = currentDate.getDate(), // Corregido: Obtener el día del mes
         month = currentDate.getMonth(), 
         year = currentDate.getFullYear();
  
@@ -112,7 +113,7 @@ function displayPosts() {
         'Miércoles',
         'Jueves',
         'Viernes',
-        'Sabado'
+        'Sábado'
     ];
  
     document.getElementById('weekDay').textContent = weekDays[weekDay];
@@ -139,20 +140,22 @@ function displayPosts() {
     document.getElementById('hours').textContent = hours;
  
     if (minutes < 10) {
-        minutes = "0" + minutes
+        minutes = "0" + minutes;
     }
  
     if (seconds < 10) {
-        seconds = "0" + seconds
+        seconds = "0" + seconds;
     }
  
     document.getElementById('minutes').textContent = minutes;
     document.getElementById('seconds').textContent = seconds;
 };
- 
-udateTime();
- 
-setInterval(udateTime, 1000);
+
+updateTime();
+
+setInterval(updateTime, 1000);
+
+
 
 function toggleContent() {
   var extraContent = document.getElementById("extraContent");
@@ -341,4 +344,41 @@ function showError(element, message) {
 
 function hideError(element) {
   element.style.display = "none";
+}
+
+window.addEventListener('scroll', function() {
+  var scrollButton = document.querySelector('.scroll-to-top');
+  if (window.scrollY > 300) {
+    scrollButton.classList.add('show');
+  } else {
+    scrollButton.classList.remove('show');
+  }
+});
+
+document.querySelector('.scroll-to-top').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+window.addEventListener('scroll', function() {
+  var scrollButton = document.querySelector('.scroll-down');
+  if (window.scrollY > 300) {
+    scrollButton.classList.add('show');
+  } else {
+    scrollButton.classList.remove('show');
+  }
+});
+
+document.querySelector('.scroll-down').addEventListener('click', function() {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: 'smooth'
+  });
+});
+
+function scrollToSection() {
+  const targetSection = document.getElementById("titulo-logo");
+  targetSection.scrollIntoView({ behavior: 'smooth' });
 }
